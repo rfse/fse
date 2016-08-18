@@ -23,7 +23,7 @@ fse_api(query = c("aircraft", "assignments", "commodities", "Facilities",
 
 \item{...}{other query arguments}
 
-\item{content_as}{character, see \code{as} argument to \code{\link{httr::content}}.}
+\item{content_as}{character, see \code{as} argument to \code{\link{content}}.}
 }
 \description{
 Make FSE API request

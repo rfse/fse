@@ -4,7 +4,7 @@
 #' @param search argument
 #' @param format either xml or csv
 #' @param ... other query arguments
-#' @param content_as character, see \code{as} argument to \code{\link{httr::content}}.
+#' @param content_as character, see \code{as} argument to \code{\link{content}}.
 #'
 #' @import httr
 #' @export
