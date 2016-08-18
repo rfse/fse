@@ -94,7 +94,7 @@ print.fse_api <- function(x, ...) {
   cat("<FSE ",
       paste( flatten_arg_list(x$query), collapse="&"),
       ">\n", sep="")
-  str(x$content)
+  utils::str(x$content)
   invisible(x)
 }
 
