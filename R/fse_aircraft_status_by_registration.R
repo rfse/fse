@@ -1,12 +1,13 @@
 #' Aircraft Status by Registration
 #'
-#' Lookup the status of a particular aircraft.
+#' Lookup the status of a particular aircraft. Only available as an XML.
 #'
 #' @param aircraftreg aircraft registration number
-#' @param ... other arguments passed to \code{\link{fse_api}}
+#'
+#' @template feed
 #'
 #' @return
-#' \code{xml_document} that can be processed with \pkg{xml2}
+#' This function can only return \code{xml_document} that can be processed with \pkg{xml2}.
 #'
 #' @export
 #'

@@ -12,15 +12,21 @@ fse_aircraft_status_by_registration(aircraftreg, ...)
 \item{...}{other arguments passed to \code{\link{fse_api}}}
 }
 \value{
-\code{xml_document} that can be processed with \pkg{xml2}
+Feed can return \code{data.frame} (default) or \code{xml_document} depending
+on the value of \code{format} (see \code{link{fse_api}}).
+
+This function can only return \code{xml_document} that can be processed with \pkg{xml2}.
 }
 \description{
-Lookup the status of a particular aircraft.
+Lookup the status of a particular aircraft. Only available as an XML.
 }
 \examples{
 \dontrun{
 r <- fse_aircraft_status_by_registration(483514)
 xml2::xml_structure(r)
 }
+}
+\seealso{
+Other fse_feeds: \code{\link{fse_aircraft_configs}}
 }
 
