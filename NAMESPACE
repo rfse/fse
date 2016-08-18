@@ -3,6 +3,7 @@
 S3method(print,fse_api)
 export(fse_aircraft_aliases)
 export(fse_aircraft_configs)
+export(fse_aircraft_for_sale)
 export(fse_aircraft_status_by_registration)
 export(fse_ak)
 export(fse_api)
