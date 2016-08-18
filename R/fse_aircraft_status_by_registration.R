@@ -1,5 +1,7 @@
 #' Aircraft Status by Registration
 #'
+#' Lookup the status of a particular aircraft.
+#'
 #' @param aircraftreg aircraft registration number
 #' @param ... other arguments passed to \code{\link{fse_api}}
 #'

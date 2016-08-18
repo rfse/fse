@@ -15,7 +15,7 @@ fse_aircraft_status_by_registration(aircraftreg, ...)
 \code{xml_document} that can be processed with \pkg{xml2}
 }
 \description{
-Aircraft Status by Registration
+Lookup the status of a particular aircraft.
 }
 \examples{
 \dontrun{
