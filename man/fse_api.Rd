@@ -24,6 +24,8 @@ fse_api(query = c("aircraft", "assignments", "commodities", "Facilities",
 \item{...}{other query arguments}
 
 \item{content_as}{character, see \code{as} argument to \code{\link{content}}.}
+
+\item{x}{object returned by \code{\link{fse_api}}}
 }
 \description{
 Make FSE API request

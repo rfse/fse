@@ -5,6 +5,7 @@
 #' @param format either xml or csv
 #' @param ... other query arguments
 #' @param content_as character, see \code{as} argument to \code{\link{content}}.
+#' @param x object returned by \code{\link{fse_api}}
 #'
 #' @import httr
 #' @export
