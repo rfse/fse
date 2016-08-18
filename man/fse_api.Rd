@@ -2,6 +2,7 @@
 % Please edit documentation in R/fse_api.R
 \name{fse_api}
 \alias{fse_api}
+\alias{print.fse_api}
 \title{Make FSE API request}
 \usage{
 fse_api(query = c("aircraft", "assignments", "commodities", "Facilities",
@@ -9,7 +10,9 @@ fse_api(query = c("aircraft", "assignments", "commodities", "Facilities",
   search = c("status", "configs", "aliases", "forsale", "makemodel",
   "ownername", "registration", "key", "forsale", "monthlysummary", "monthyear",
   "id", "members", "aircraft", "fbo", "fbosto", "jobsfrom"), format = c("xml",
-  "csv"), ...)
+  "csv"), ..., content_as = "parsed")
+
+\method{print}{fse_api}(x, ...)
 }
 \arguments{
 \item{query}{argument}
@@ -19,6 +22,8 @@ fse_api(query = c("aircraft", "assignments", "commodities", "Facilities",
 \item{format}{either xml or csv}
 
 \item{...}{other query arguments}
+
+\item{content_as}{character, see \code{as} argument to \code{\link{httr::content}}.}
 }
 \description{
 Make FSE API request

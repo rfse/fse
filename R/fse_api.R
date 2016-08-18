@@ -4,6 +4,7 @@
 #' @param search argument
 #' @param format either xml or csv
 #' @param ... other query arguments
+#' @param content_as character, see \code{as} argument to \code{\link{httr::content}}.
 #'
 #' @import httr
 #' @export
@@ -15,36 +16,102 @@ fse_api <- function(
              "monthyear", "id", "members", "aircraft", "fbo", "fbosto",
              "jobsfrom"),
   format=c("xml", "csv"),
-  ...
+  ...,
+  content_as="parsed"
 ) {
   # Process arguments
   query <- match.arg(query)
   search <- match.arg(search)
   format <- match.arg(format)
-  arglist <- list(...)
 
+  valid_other_args <- c("makemodel", "ownername", "aircraftreg", "readaccesskey",
+                        "month", "year", "icao", "serialnumber", "fromid", "type",
+                        "icaos")
+  other_args <- list(...)
+  arg_ok <- names(other_args) %in% valid_other_args
+  if(!all(arg_ok))
+    stop("invalid arguments: ", paste(names(other_args)[!arg_ok], collapse=", "))
+
+  arglist <- c(
+    list(
+      userkey=fse_ak(),
+      format = format,
+      query = query,
+      search = search
+    ),
+    other_args
+  )
 
   url <- modify_url(
     url = "http://server.fseconomy.net/data",
-    query = c(
-      list(
-        userkey=fse_ak(),
-        format = format,
-        query = query,
-        search = search
-        ),
-      arglist
+    query = arglist
     )
+  # return(url)
+
+  # Make the request
+  resp <- GET(url)
+
+  # Check response type
+  resp_type <- http_type(resp)
+  expect_type <- c(
+    csv = "application/x-excel",
+    xml = "text/xml"
+    )[format]
+  response_ok <- all.equal(resp_type, expect_type, check.attributes = FALSE)
+  if( !response_ok ) {
+    stop("API did not return ",
+         sQuote(expect_type),
+         " but ",
+         sQuote(resp_type),
+         call. = FALSE)
+  }
+
+
+  # Parse the response
+  parsed <- switch(format,
+                   csv = parse_csv(content(resp)),
+                   xml = content(resp, as=content_as)
   )
-  return(url)
 
-  # TODO make the GET request
+  # TODO Handle API errors
 
-  # TODO check response type
+  # Return parsed response
+  structure(
+    list(
+      content = parsed,
+      query = arglist,
+      response = resp
+    ),
+    class="fse_api"
+  )
+}
 
-  # TODO parse the response
 
-  # TODO handle API errors
+#' @method print fse_api
+#' @export
+#' @rdname fse_api
+print.fse_api <- function(x, ...) {
+  cat("<FSE ",
+      paste( flatten_arg_list(x$query), collapse="&"),
+      ">\n", sep="")
+  str(x$content)
+  invisible(x)
+}
 
-  # TODO return parsed response
+
+
+
+
+if(FALSE) {
+r <- fse_api(search="registration", aircraftreg=483514, format="csv")
+r <- GET(u)
+type <- http_type(r)
+
+z <- content(r)
+d <- parse_csv(z)
+
+u <- fse_api(search="registration", aircraftreg=483514, format="xml")
+r <- GET(u)
+http_type(r)
+xml <- content(r)
 }
