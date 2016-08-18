@@ -9,7 +9,7 @@ fse_icao_data <- function() {
   u <- "http://server.fseconomy.net/static/library/datafeed_icaodata.zip"
   fname <- tempfile()
   on.exit(unlink(fname))
-  download.file(u, destfile=fname)
+  utils::download.file(u, destfile=fname)
   con <- unz(fname, "icaodata.csv")
-  read.csv(con, stringsAsFactors = FALSE)
+  utils::read.csv(con, stringsAsFactors = FALSE)
 }
