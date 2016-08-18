@@ -1,12 +1,3 @@
-#' FSE data feeds
-#'
-#'
-#'
-#'
-#'
-library(httr)
-library(xml2)
-
 # Basic GET
 fse_GET <- function(path="data", ... ) {
   req <- GET( getOption("fse.url", "http://server.fseconomy.net"), path=path, ...)
