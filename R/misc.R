@@ -5,7 +5,7 @@
 parse_csv <- function(r, ...) {
   con <- textConnection( rawToChar(r) )
   on.exit(close(con))
-  read.csv(con, stringsAsFactors = FALSE, ...)
+  utils::read.csv(con, stringsAsFactors = FALSE, ...)
 }
 
 
