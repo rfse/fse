@@ -8,6 +8,8 @@ fse_aircraft_status_by_registration(aircraftreg, ...)
 }
 \arguments{
 \item{aircraftreg}{aircraft registration number}
+
+\item{...}{other arguments passed to \code{\link{fse_api}}}
 }
 \value{
 \code{xml_document} that can be processed with \pkg{xml2}

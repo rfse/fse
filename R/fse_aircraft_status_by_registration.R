@@ -1,6 +1,7 @@
 #' Aircraft Status by Registration
 #'
 #' @param aircraftreg aircraft registration number
+#' @param ... other arguments passed to \code{\link{fse_api}}
 #'
 #' @return
 #' \code{xml_document} that can be processed with \pkg{xml2}
