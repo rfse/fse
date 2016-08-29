@@ -22,6 +22,7 @@ Other fse_feeds: \code{\link{fse_aircraft_aliases}},
   \code{\link{fse_aircraft_configs}},
   \code{\link{fse_aircraft_for_sale}},
   \code{\link{fse_aircraft_status_by_registration}},
+  \code{\link{fse_icao_jobs_from}},
   \code{\link{fse_icao_jobs_to}}
 }
 
