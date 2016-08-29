@@ -17,8 +17,11 @@ on the value of \code{format} (see \code{\link{fse_api}}).
 Aliases of FSE aircraft.
 }
 \seealso{
-Other fse_feeds: \code{\link{fse_aircraft_configs}},
+Other fse_feeds: \code{\link{fse_aircraft_by_makemodel}},
+  \code{\link{fse_aircraft_by_owner_name}},
+  \code{\link{fse_aircraft_configs}},
   \code{\link{fse_aircraft_for_sale}},
-  \code{\link{fse_aircraft_status_by_registration}}
+  \code{\link{fse_aircraft_status_by_registration}},
+  \code{\link{fse_icao_jobs_to}}
 }
 

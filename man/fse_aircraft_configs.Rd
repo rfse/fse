@@ -18,7 +18,10 @@ Data on all types of aircraft available in FSE.
 }
 \seealso{
 Other fse_feeds: \code{\link{fse_aircraft_aliases}},
+  \code{\link{fse_aircraft_by_makemodel}},
+  \code{\link{fse_aircraft_by_owner_name}},
   \code{\link{fse_aircraft_for_sale}},
-  \code{\link{fse_aircraft_status_by_registration}}
+  \code{\link{fse_aircraft_status_by_registration}},
+  \code{\link{fse_icao_jobs_to}}
 }
 
