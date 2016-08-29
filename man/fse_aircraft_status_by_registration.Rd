@@ -13,7 +13,7 @@ fse_aircraft_status_by_registration(aircraftreg, ...)
 }
 \value{
 Feed can return \code{data.frame} (default) or \code{xml_document} depending
-on the value of \code{format} (see \code{link{fse_api}}).
+on the value of \code{format} (see \code{\link{fse_api}}).
 
 This function can only return \code{xml_document} that can be processed with \pkg{xml2}.
 }
