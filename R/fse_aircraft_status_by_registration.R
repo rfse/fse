@@ -7,7 +7,8 @@
 #' @template feed
 #'
 #' @return
-#' This function only returns \code{xml_document} that can be processed with \pkg{xml2}.
+#' This function only returns object with content as \code{xml_document} that
+#' can be processed with \pkg{xml2}.
 #'
 #' @export
 #'
@@ -17,12 +18,11 @@
 #' xml2::xml_structure(r)
 #' }
 fse_aircraft_status_by_registration <- function(aircraftreg, ...) {
-  res <- fse_api(
+  fse_api(
     format="xml",
     query="aircraft",
     search="status",
     aircraftreg=aircraftreg,
     ...
     )
-  res$content
 }
