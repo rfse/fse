@@ -1,11 +1,32 @@
 #' Make FSE API request
 #'
+#' Function makes a request to FSE data system.
+#'
 #' @param query argument
 #' @param search argument
-#' @param format either xml or csv
-#' @param ... other query arguments
-#' @param content_as character, see \code{as} argument to \code{\link{content}}.
+#' @param format either \code{"xml"} or \code{"csv"}
+#' @param ... other arguments, see Details
+#' @param content_as character, passed to \code{as} argument of \code{\link{content}}
 #' @param x object returned by \code{\link{fse_api}}
+#'
+#'
+#' @details
+#' Requests to FSE data feeds require at least specyfying \code{format} and
+#' \code{query} URL arguments. Possible values of these arguments are specified
+#' in the synopsis. Do note that not all possible combinations make sense. Other
+#' arguments, which are feed-specific can be passed through \code{...}. See FSE
+#' feed documentation for details.
+#'
+#' Arguments \code{format} and \code{content_as} can be used to further
+#' customize the output format.
+#'
+#'
+#'
+#' @return
+#' A list of class "fse_api" with the following components:
+#' \item{content}{a data frame or \code{xml_document}, depending on the value of \code{format} argument}
+#' \item{query}{a list with query parameters used in the request}
+#' \item{response}{the result of the request, as returned by httr::\code{\link{GET}}}
 #'
 #' @import httr
 #' @export
