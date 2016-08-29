@@ -9,8 +9,8 @@ fse_api(query = c("aircraft", "assignments", "commodities", "Facilities",
   "fbos", "flightlogs", "group", "icao", "payments", "statistics"),
   search = c("status", "configs", "aliases", "forsale", "makemodel",
   "ownername", "registration", "key", "forsale", "monthlysummary", "monthyear",
-  "id", "members", "aircraft", "fbo", "fbosto", "jobsfrom"), format = c("xml",
-  "csv"), ..., content_as = "parsed")
+  "id", "members", "aircraft", "fbo", "fbos", "jobsto", "jobsfrom"),
+  format = c("xml", "csv"), ..., content_as = "parsed")
 
 \method{print}{fse_api}(x, ...)
 }

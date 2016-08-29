@@ -35,7 +35,7 @@ fse_api <- function(
             "flightlogs", "group", "icao", "payments", "statistics"),
   search = c("status", "configs", "aliases", "forsale", "makemodel",
              "ownername", "registration", "key", "forsale", "monthlysummary",
-             "monthyear", "id", "members", "aircraft", "fbo", "fbosto",
+             "monthyear", "id", "members", "aircraft", "fbo", "fbos", "jobsto",
              "jobsfrom"),
   format=c("xml", "csv"),
   ...,
@@ -46,9 +46,9 @@ fse_api <- function(
   search <- match.arg(search)
   format <- match.arg(format)
 
-  valid_other_args <- c("makemodel", "ownername", "aircraftreg", "readaccesskey",
-                        "month", "year", "icao", "serialnumber", "fromid", "type",
-                        "icaos")
+  valid_other_args <- c("query", "search", "format", "makemodel", "ownername",
+                        "aircraftreg", "readaccesskey", "month", "year", "icao",
+                        "serialnumber", "fromid", "type", "icaos")
   other_args <- list(...)
   arg_ok <- names(other_args) %in% valid_other_args
   if(!all(arg_ok))
