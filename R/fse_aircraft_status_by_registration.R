@@ -7,7 +7,7 @@
 #' @template feed
 #'
 #' @return
-#' This function can only return \code{xml_document} that can be processed with \pkg{xml2}.
+#' This function only returns \code{xml_document} that can be processed with \pkg{xml2}.
 #'
 #' @export
 #'

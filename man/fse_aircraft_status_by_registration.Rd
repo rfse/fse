@@ -15,7 +15,7 @@ fse_aircraft_status_by_registration(aircraftreg, ...)
 Feed can return \code{data.frame} (default) or \code{xml_document} depending
 on the value of \code{format} (see \code{\link{fse_api}}).
 
-This function can only return \code{xml_document} that can be processed with \pkg{xml2}.
+This function only returns \code{xml_document} that can be processed with \pkg{xml2}.
 }
 \description{
 Lookup the status of a particular aircraft. Only available as an XML.
