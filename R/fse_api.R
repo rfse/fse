@@ -73,6 +73,16 @@ fse_api <- function(
   # Make the request
   resp <- GET(url)
 
+  # Test for HTTP errors
+  if( http_error(resp) ) {
+    stop(
+      sprintf(
+        "FSE request failed [%s]",
+        status_code(resp)
+      )
+    )
+  }
+
   # Check response type
   resp_type <- http_type(resp)
   expect_type <- c(
