@@ -8,5 +8,5 @@ fse_aircraft_for_sale <- function(...) {
     query="aircraft",
     search="forsale",
     ...
-  )
+  )$content
 }
