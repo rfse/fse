@@ -7,6 +7,8 @@
 fse_aircraft_by_makemodel(makemodel, ...)
 }
 \arguments{
+\item{makemodel}{character, aircraft model name, see Details}
+
 \item{...}{other arguments passed to \code{\link{fse_api}}}
 }
 \value{
@@ -15,6 +17,12 @@ on the value of \code{format} (see \code{\link{fse_api}}).
 }
 \description{
 Aircraft by MakeModel
+}
+\details{
+To get a list of valid model names that can be submitted to \code{makemodel}
+fetch aircraft configs with \code{\link{fse_aicraft_configs}} or go to FSE
+system WWW page, "Aircraft" menu, "Purchase aircraft" item and check the
+dropdown list after selecting "By model" radio button.
 }
 \seealso{
 Other fse_feeds: \code{\link{fse_aircraft_aliases}},
