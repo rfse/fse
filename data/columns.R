@@ -27,7 +27,8 @@ columns <- merge(
         "aircraft_for_sale","TimeLast100hr",
         "aircraft_for_sale","LeasedFrom",
         "aircraft_for_sale","MonthlyFee",
-        "aircraft_for_sale","FeeOwed"
+        "aircraft_for_sale","FeeOwed",
+        "aircraft_aliases", "Alias"
       )
     ),
     stringsAsFactors = FALSE
@@ -62,7 +63,8 @@ columns <- merge(
         "TimeLast100hr","Time since last 100 hour check",
         "LeasedFrom","Leasor",
         "MonthlyFee","Monthly maintenance fee",
-        "FeeOwed", NA
+        "FeeOwed", NA,
+        "Alias", "Aircraft alias"
       )
     ),
     stringsAsFactors = FALSE
