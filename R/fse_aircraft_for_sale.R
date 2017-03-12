@@ -5,7 +5,9 @@
 #' @return
 #' The object will have the following tags/columns:
 #'
-#' \Sexpr[results=verbatim]{data(columns); subset(columns, feed == "aircraft_for_sale", select=c("column", "description"))}
+#' \Sexpr[results=rd,stage=build]{
+#' fse:::rd_data_frame(subset(fse::columns, feed == "aircraft_for_sale", select=c("column", "description")))
+#' }
 #'
 #'
 #' @export
