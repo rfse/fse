@@ -36,23 +36,51 @@ fse_ak <- function(key=NULL, verbose=getOption("fse.verbose", FALSE)) {
     stop("no FSE key, set in the environment or option, or use `key` argument")
   }
 
-  structure(
-    key,
-    class=c(
-      ifelse(use_service, "service", "personal"),
-      "fse_key",
-      "character"
-    )
-  )
+  as_fse_key(key, ifelse(use_service, "service", "personal"))
 }
 
 
 
 #' @method print fse_key
 #' @rdname fse_ak
+#'
+#' @param x for the \code{print} method, object inheriting from class "fse_key".
+#'   For \code{as_fse_key} object coercible to character interpreted as FSE
+#'   access key.
+#'
 #' @export
 print.fse_key <- function(x, ...) {
   cls <- class(x)
   cat("<FSE ", cls[1], " key: ", x, ">", sep="")
   invisible(NULL)
+}
+
+
+
+
+
+#' @rdname fse_ak
+#'
+#' @details
+#' Function \code{as_fse_key} stores an FSE access key together with the
+#' information whether it is a personal key or service key.
+#'
+#' @export
+as_fse_key <- function(x, ...) UseMethod("as_fse_key")
+
+#' @method as_fse_key character
+#' @rdname fse_ak
+as_fse_key.character <- function(x, type=c("personal", "service")) {
+  stopifnot(!is.na(x))
+  type <- match.arg(type)
+  structure(
+    x,
+    class = c(type, "fse_key", "character")
+  )
+}
+
+#' @method as_fse_key default
+#' @rdname fse_ak
+as_fse_key.default <- function(x, ...) {
+  as_fse_key.character(as.character(x), ...)
 }

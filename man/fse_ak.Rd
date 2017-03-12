@@ -3,17 +3,34 @@
 \name{fse_ak}
 \alias{fse_ak}
 \alias{print.fse_key}
+\alias{as_fse_key}
+\alias{as_fse_key.character}
+\alias{as_fse_key.default}
 \title{FSE access keys}
 \usage{
 fse_ak(key = NULL, verbose = getOption("fse.verbose", FALSE))
 
 \method{print}{fse_key}(x, ...)
+
+as_fse_key(x, ...)
+
+\method{as_fse_key}{character}(x, type = c("personal", "service"))
+
+\method{as_fse_key}{default}(x, ...)
 }
 \arguments{
 \item{verbose}{logical, should more verbose output be provided
 
 Retrieved from an enviroment variable \code{FSE_ACCESS_KEY}.}
+
+\item{x}{for the \code{print} method, object inheriting from class "fse_key".
+For \code{as_fse_key} object coercible to character interpreted as FSE
+access key.}
 }
 \description{
 FSE access keys
+}
+\details{
+Function \code{as_fse_key} stores an FSE access key together with the
+information whether it is a personal key or service key.
 }
