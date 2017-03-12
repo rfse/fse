@@ -4,7 +4,7 @@
 #'
 #' Retrieved from an enviroment variable \code{FSE_ACCESS_KEY}.
 #' @export
-fse_ak <- function(key=NULL, verbose=getOption("fse.verbose", TRUE)) {
+fse_ak <- function(key=NULL, verbose=getOption("fse.verbose", FALSE)) {
   if( !is.null(key) ) {
     return(key)
   } else {
@@ -12,7 +12,7 @@ fse_ak <- function(key=NULL, verbose=getOption("fse.verbose", TRUE)) {
     use_service <- TRUE
     use_service <- ifelse(
       Sys.getenv("FSE_USE_SERVICE") != "",
-      as.logical( Sys.getenv("FSE_USE_SERVICE") ),
+      as.logical( as.numeric(Sys.getenv("FSE_USE_SERVICE") ) ),
       use_service
     )
     use_service <- getOption("fse.use_service", use_service)

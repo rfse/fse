@@ -7,7 +7,7 @@ Authors@R: person("Michal", "Bojanowski", role=c("aut", "cre"), email="michal299
 Description: FSE system provides several data feeds. This package provides 
   functions to fetch data from FSE into either data frames or XML objects.
 Imports: httr, xml2, utils
-Suggests: testthat
+Suggests: testthat, withr
 License: MIT + file LICENSE
 LazyData: TRUE
 RoxygenNote: 6.0.1
