@@ -19,7 +19,7 @@ columns <- as.data.frame(
       "aircraft_for_sale","Bonus", "Bonus",
       "aircraft_for_sale","RentalTime", "?",
       "aircraft_for_sale","RentedBy", "By whom currently rented or 'Not rented.'",
-      "aircraft_for_sale","PctFuel", "Current fuel load in %",
+      "aircraft_for_sale","PctFuel", "Current fuel load as percent",
       "aircraft_for_sale","NeedsRepair", "Whether aircraft needs repairs",
       "aircraft_for_sale","AirframeTime", "Aircraft airframe time",
       "aircraft_for_sale","EngineTime", "Aircraft engine time",
