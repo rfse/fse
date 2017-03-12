@@ -10,12 +10,18 @@ e <- c(
 test_that("fse_ak fetches properly based on environment variable", {
   withr::with_envvar(
     replace(e, 1, "0"),
-    expect_equivalent( fse_ak(), e["FSE_PERSONAL_KEY"] )
+    expect_equivalent(
+      fse_ak(),
+      as_fse_key(e["FSE_PERSONAL_KEY"], type="personal")
+    )
   )
 
   withr::with_envvar(
     replace(e, 1, "1"),
-    expect_equivalent( fse_ak(), e["FSE_SERVICE_KEY"] )
+    expect_equivalent(
+      fse_ak(),
+      as_fse_key(e["FSE_SERVICE_KEY"], type="service")
+      )
   )
 })
 
@@ -27,7 +33,10 @@ test_that("fse_ak fetches properly based on R option", {
     e,
     withr::with_options(
       list(fse.use_service = 0),
-      expect_equivalent( fse_ak(), e["FSE_PERSONAL_KEY"] )
+      expect_equivalent(
+        fse_ak(),
+        as_fse_key(e["FSE_PERSONAL_KEY"], "personal")
+        )
     )
   )
 
@@ -35,7 +44,10 @@ test_that("fse_ak fetches properly based on R option", {
     e,
     withr::with_options(
       list(fse.use_service = 1),
-      expect_equivalent( fse_ak(), e["FSE_SERVICE_KEY"] )
+      expect_equivalent(
+        fse_ak(),
+        as_fse_key(e["FSE_SERVICE_KEY"], type="service")
+      )
     )
   )
 
