@@ -28,6 +28,7 @@ columns <- merge(
         "aircraft_for_sale","LeasedFrom",
         "aircraft_for_sale","MonthlyFee",
         "aircraft_for_sale","FeeOwed",
+        "aircraft_aliases", "MakeModel",
         "aircraft_aliases", "Alias"
       )
     ),
