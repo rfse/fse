@@ -23,3 +23,13 @@ flatten_arg_list <- function(l) {
     sep="="
   )
 }
+
+
+
+# Render dataframe as an Rd-style itemize list
+#
+# @param d data frame
+rd_data_frame <- function(d) {
+  items <- apply(d, 1, function(r) paste0("\\item \\code{", r[1], "} -- ", r[2]))
+  c("\\itemize{", items, "}")
+}
