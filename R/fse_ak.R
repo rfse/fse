@@ -1,4 +1,4 @@
-#' FSE access key
+#' FSE access keys
 #'
 #' @param verbose logical, should more verbose output be provided
 #'
@@ -36,5 +36,23 @@ fse_ak <- function(key=NULL, verbose=getOption("fse.verbose", FALSE)) {
     stop("no FSE key, set in the environment or option, or use `key` argument")
   }
 
-  return(key)
+  structure(
+    key,
+    class=c(
+      ifelse(use_service, "service", "personal"),
+      "fse_key",
+      "character"
+    )
+  )
+}
+
+
+
+#' @method print fse_key
+#' @rdname fse_ak
+#' @export
+print.fse_key <- function(x, ...) {
+  cls <- class(x)
+  cat("<FSE ", cls[1], " key: ", x, ">", sep="")
+  invisible(NULL)
 }
