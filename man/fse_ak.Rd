@@ -2,10 +2,18 @@
 % Please edit documentation in R/fse_ak.R
 \name{fse_ak}
 \alias{fse_ak}
-\title{FSE access key}
+\alias{print.fse_key}
+\title{FSE access keys}
 \usage{
-fse_ak()
+fse_ak(key = NULL, verbose = getOption("fse.verbose", FALSE))
+
+\method{print}{fse_key}(x, ...)
+}
+\arguments{
+\item{verbose}{logical, should more verbose output be provided
+
+Retrieved from an enviroment variable \code{FSE_ACCESS_KEY}.}
 }
 \description{
-Retrieved from an enviroment variable \code{FSE_ACCESS_KEY}.
+FSE access keys
 }
