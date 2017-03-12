@@ -53,7 +53,7 @@ columns <- merge(
         "RentalWet","Wet rental price",
         "RentalType","Rental type",
         "Bonus","Bonus",
-        "RentalTime","?",
+        "RentalTime", NA,
         "RentedBy","By whom currently rented or 'Not rented.'",
         "PctFuel","Current fuel load as percent",
         "NeedsRepair","Whether aircraft needs repairs",
@@ -62,7 +62,7 @@ columns <- merge(
         "TimeLast100hr","Time since last 100 hour check",
         "LeasedFrom","Leasor",
         "MonthlyFee","Monthly maintenance fee",
-        "FeeOwed","?"
+        "FeeOwed", NA
       )
     ),
     stringsAsFactors = FALSE

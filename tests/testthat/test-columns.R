@@ -5,7 +5,12 @@ test_that("column data has three columns", {
 })
 
 test_that("there are no NAs", {
-  expect_false( any(is.na(columns$column)))
-  expect_false( any(is.na(columns$feed)))
-  expect_false( any(is.na(columns$description)))
+  isna <- apply(columns, 1, function(r) any(is.na(r)))
+  expect_false(
+    any(isna),
+    info = if (any(isna)) paste(
+      capture.output(print(columns[isna,]), row.names=FALSE),
+      collapse="\n"
+    ) else NULL
+  )
 })
