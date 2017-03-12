@@ -4,7 +4,8 @@ Title: Interfacing FSE Data Feeds
 Version: 0.0-1
 Date: 2016-08-18
 Authors@R: person("Michal", "Bojanowski", role=c("aut", "cre"), email="michal2992@gmail.com")
-Description: It does what it does.
+Description: FSE system provides several data feeds. This package provides 
+  functions to fetch data from FSE into either data frames or XML objects.
 Imports: httr, xml2, utils
 Suggests: testthat
 License: MIT + file LICENSE
