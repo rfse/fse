@@ -56,13 +56,19 @@ fse_api <- function(
 
   arglist <- c(
     list(
-      userkey=fse_ak(),
       format = format,
       query = query,
       search = search
     ),
     other_args
   )
+
+  k <- fse_ak()
+  if(inherits(k, "service")) {
+    arglist$servicekey <- as.character(k)
+  } else {
+    arglist$userkey <- as.character(k)
+  }
 
   url <- modify_url(
     url = "http://server.fseconomy.net/data",
