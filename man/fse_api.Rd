@@ -10,7 +10,7 @@ fse_api(query = c("aircraft", "assignments", "commodities", "Facilities",
   search = c("status", "configs", "aliases", "forsale", "makemodel",
   "ownername", "registration", "key", "forsale", "monthlysummary", "monthyear",
   "id", "members", "aircraft", "fbo", "fbos", "jobsto", "jobsfrom"),
-  format = c("xml", "csv"), ..., content_as = "parsed")
+  format = c("csv", "xml"), ..., content_as = "parsed")
 
 \method{print}{fse_api}(x, ...)
 }
@@ -19,7 +19,7 @@ fse_api(query = c("aircraft", "assignments", "commodities", "Facilities",
 
 \item{search}{argument}
 
-\item{format}{either \code{"xml"} or \code{"csv"}}
+\item{format}{either \code{"csv"} (default) or \code{"xml"}}
 
 \item{...}{other arguments, see Details}
 
@@ -46,4 +46,3 @@ feed documentation for details.
 Arguments \code{format} and \code{content_as} can be used to further
 customize the output format.
 }
-

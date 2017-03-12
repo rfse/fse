@@ -8,4 +8,3 @@
 \description{
 fse: interfacing FSE data feeds
 }
-

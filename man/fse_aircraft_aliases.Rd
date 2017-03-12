@@ -25,4 +25,3 @@ Other fse_feeds: \code{\link{fse_aircraft_by_makemodel}},
   \code{\link{fse_icao_jobs_from}},
   \code{\link{fse_icao_jobs_to}}
 }
-

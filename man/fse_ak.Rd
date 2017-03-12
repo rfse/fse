@@ -9,4 +9,3 @@ fse_ak()
 \description{
 Retrieved from an enviroment variable \code{FSE_ACCESS_KEY}.
 }
-

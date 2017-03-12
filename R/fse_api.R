@@ -4,7 +4,7 @@
 #'
 #' @param query argument
 #' @param search argument
-#' @param format either \code{"xml"} or \code{"csv"}
+#' @param format either \code{"csv"} (default) or \code{"xml"}
 #' @param ... other arguments, see Details
 #' @param content_as character, passed to \code{as} argument of \code{\link{content}}
 #' @param x object returned by \code{\link{fse_api}}
@@ -37,7 +37,7 @@ fse_api <- function(
              "ownername", "registration", "key", "forsale", "monthlysummary",
              "monthyear", "id", "members", "aircraft", "fbo", "fbos", "jobsto",
              "jobsfrom"),
-  format=c("xml", "csv"),
+  format=c("csv", "xml"),
   ...,
   content_as="parsed"
 ) {

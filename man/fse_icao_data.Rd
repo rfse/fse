@@ -12,4 +12,3 @@ A data frame.
 \description{
 Data on airports available in FSE.
 }
-
