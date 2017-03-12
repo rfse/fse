@@ -12,6 +12,10 @@ fse_aircraft_for_sale(...)
 \value{
 Feed can return \code{data.frame} (default) or \code{xml_document} depending
 on the value of \code{format} (see \code{\link{fse_api}}).
+
+The object will have the following tags/columns:
+
+\Sexpr[results=verbatim]{data(columns); subset(columns, feed == "aircraft_for_sale", select=c("column", "description"))}
 }
 \description{
 Aircraft for Sale
