@@ -9,7 +9,7 @@ test_that("fse_aircraft_by_owner_name works silently", {
 
 test_that("fse_aircraft_by_owner_name gives error for nonexisting user", {
   expect_error(
-    r <- fse_aircraft_by_owner_name("foo")
+    r <- fse_aircraft_by_owner_name("khaught")
   )
 })
 
