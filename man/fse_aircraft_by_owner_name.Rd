@@ -7,6 +7,8 @@
 fse_aircraft_by_owner_name(ownername, ...)
 }
 \arguments{
+\item{ownername}{name of FSE user}
+
 \item{...}{other arguments passed to \code{\link{fse_api}}}
 }
 \value{
@@ -14,7 +16,7 @@ Feed can return \code{data.frame} (default) or \code{xml_document} depending
 on the value of \code{format} (see \code{\link{fse_api}}).
 }
 \description{
-Aircraft by Owner Name
+List aircraft owned by a specific FSE user.
 }
 \seealso{
 Other fse_feeds: \code{\link{fse_aircraft_aliases}},

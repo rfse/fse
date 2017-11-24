@@ -1,5 +1,9 @@
 #' Aircraft by Owner Name
 #'
+#' List aircraft owned by a specific FSE user.
+#'
+#' @param ownername name of FSE user
+#'
 #' @template feed
 #'
 #' @export
