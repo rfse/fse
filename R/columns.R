@@ -12,4 +12,12 @@
 #'
 #' @docType data
 #' @name columns
-"columns"
+NULL
+
+
+column_descriptions <- function(feedname) {
+  try(print(
+    subset(columns, feed == feedname, select=-feed),
+    row.names=FALSE
+  ))
+}
