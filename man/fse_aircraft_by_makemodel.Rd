@@ -13,7 +13,10 @@ fse_aircraft_by_makemodel(makemodel, ...)
 }
 \value{
 Feed can return \code{data.frame} (default) or \code{xml_document} depending
-on the value of \code{format} (see \code{\link{fse_api}}).
+on the value of \code{format} (see \code{\link{fse_api}}). In either case the result will
+contain the following columns/tags:
+
+\Sexpr[results=verbatim,stage=render,echo=FALSE]{try(fse:::column_descriptions(''))}
 }
 \description{
 Aircraft by MakeModel
@@ -25,7 +28,7 @@ system WWW page, "Aircraft" menu, "Purchase aircraft" item and check the
 dropdown list after selecting "By model" radio button.
 }
 \seealso{
-Other fse_feeds: \code{\link{fse_aircraft_aliases}},
+Other FSE feeds: \code{\link{fse_aircraft_aliases}},
   \code{\link{fse_aircraft_by_owner_name}},
   \code{\link{fse_aircraft_configs}},
   \code{\link{fse_aircraft_for_sale}},

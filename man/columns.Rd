@@ -10,10 +10,6 @@
 \item{column}{Column name}
 \item{description}{Textual description}
 }}
-\usage{
-columns
-}
 \description{
 Data frame storing descriptions of fields/columns returned by various feeds.
 }
-\keyword{datasets}

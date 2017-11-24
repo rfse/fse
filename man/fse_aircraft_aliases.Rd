@@ -11,7 +11,10 @@ fse_aircraft_aliases(...)
 }
 \value{
 Feed can return \code{data.frame} (default) or \code{xml_document} depending
-on the value of \code{format} (see \code{\link{fse_api}}).
+on the value of \code{format} (see \code{\link{fse_api}}). In either case the result will
+contain the following columns/tags:
+
+\Sexpr[results=verbatim,stage=render,echo=FALSE]{try(fse:::column_descriptions(''))}
 
 The object will have the following tags/columns:
 
@@ -23,7 +26,7 @@ fse:::rd_data_frame(subset(fse::columns, feed == "aircraft_aliases", select=c("c
 Aliases of FSE aircraft.
 }
 \seealso{
-Other fse_feeds: \code{\link{fse_aircraft_by_makemodel}},
+Other FSE feeds: \code{\link{fse_aircraft_by_makemodel}},
   \code{\link{fse_aircraft_by_owner_name}},
   \code{\link{fse_aircraft_configs}},
   \code{\link{fse_aircraft_for_sale}},

@@ -11,13 +11,16 @@ fse_icao_jobs_to(icaos, ...)
 }
 \value{
 Feed can return \code{data.frame} (default) or \code{xml_document} depending
-on the value of \code{format} (see \code{\link{fse_api}}).
+on the value of \code{format} (see \code{\link{fse_api}}). In either case the result will
+contain the following columns/tags:
+
+\Sexpr[results=verbatim,stage=render,echo=FALSE]{try(fse:::column_descriptions(''))}
 }
 \description{
 Jobs to specific airport.
 }
 \seealso{
-Other fse_feeds: \code{\link{fse_aircraft_aliases}},
+Other FSE feeds: \code{\link{fse_aircraft_aliases}},
   \code{\link{fse_aircraft_by_makemodel}},
   \code{\link{fse_aircraft_by_owner_name}},
   \code{\link{fse_aircraft_configs}},
