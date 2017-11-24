@@ -4,6 +4,7 @@
 #'
 #' @param ownername name of FSE user
 #'
+#' @templateVar feedname aircraft_by_owner_name
 #' @template feed
 #'
 #' @export
