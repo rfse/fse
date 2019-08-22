@@ -9,7 +9,7 @@ test_that("there are no NAs", {
   expect_false(
     any(isna),
     info = if (any(isna)) paste(
-      capture.output(print(columns[isna,]), row.names=FALSE),
+      capture.output(print(columns[isna,], row.names=FALSE)),
       collapse="\n"
     ) else NULL
   )
