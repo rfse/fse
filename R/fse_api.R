@@ -76,8 +76,11 @@ fse_api <- function(
     )
   # return(url)
 
+  # Make user agent
+  ua <- user_agent("skybike's R package under development")
+
   # Make the request
-  resp <- GET(url)
+  resp <- GET(url, ua)
 
   # Test for HTTP errors
   if( http_error(resp) ) {
