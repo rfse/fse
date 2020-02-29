@@ -71,7 +71,7 @@ fse_api <- function(
   }
 
   url <- modify_url(
-    url = "http://server.fseconomy.net/data",
+    url = "https://server.fseconomy.net/data",
     query = arglist
     )
   # return(url)
@@ -133,7 +133,7 @@ fse_api <- function(
 #' @rdname fse_api
 print.fse_api <- function(x, ...) {
   cat("<FSE ",
-      paste( flatten_arg_list(x$query), collapse="&"),
+      # paste( flatten_arg_list(x$query), collapse="&"),
       ">\n", sep="")
   utils::str(x$content)
   invisible(x)
