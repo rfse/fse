@@ -88,7 +88,7 @@ columns <- merge(
         "TimeLast100hr","Time since last 100 hour check",
         "LeasedFrom","Leasor",
         "MonthlyFee","Monthly maintenance fee",
-        "FeeOwed", NA,
+        "FeeOwed", "Outstanding maintenace fee to be paid",
         "Alias", "Aircraft alias"
       )
     ),
