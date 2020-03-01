@@ -24,5 +24,5 @@ fse_aircraft_status_by_registration <- function(aircraftreg, ...) {
     search="status",
     aircraftreg=aircraftreg,
     ...
-    )
+    )$content
 }
