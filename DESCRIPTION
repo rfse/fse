@@ -10,4 +10,4 @@ Imports: httr, xml2, utils
 Suggests: testthat, withr
 License: MIT + file LICENSE
 LazyData: TRUE
-RoxygenNote: 6.0.1
+RoxygenNote: 7.0.2
