@@ -3,7 +3,6 @@
 \docType{package}
 \name{fse}
 \alias{fse}
-\alias{fse-package}
 \title{fse: interfacing FSE data feeds}
 \description{
 fse: interfacing FSE data feeds

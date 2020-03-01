@@ -5,12 +5,16 @@
 \alias{print.fse_api}
 \title{Make FSE API request}
 \usage{
-fse_api(query = c("aircraft", "assignments", "commodities", "Facilities",
-  "fbos", "flightlogs", "group", "icao", "payments", "statistics"),
-  search = c("status", "configs", "aliases", "forsale", "makemodel",
-  "ownername", "registration", "key", "forsale", "monthlysummary", "monthyear",
-  "id", "members", "aircraft", "fbo", "fbos", "jobsto", "jobsfrom"),
-  format = c("csv", "xml"), ..., content_as = "parsed")
+fse_api(
+  query = c("aircraft", "assignments", "commodities", "Facilities", "fbos",
+    "flightlogs", "group", "icao", "payments", "statistics"),
+  search = c("status", "configs", "aliases", "forsale", "makemodel", "ownername",
+    "registration", "key", "forsale", "monthlysummary", "monthyear", "id", "members",
+    "aircraft", "fbo", "fbos", "jobsto", "jobsfrom"),
+  format = c("csv", "xml"),
+  ...,
+  content_as = "parsed"
+)
 
 \method{print}{fse_api}(x, ...)
 }

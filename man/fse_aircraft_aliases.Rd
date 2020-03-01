@@ -26,11 +26,13 @@ fse:::rd_data_frame(subset(fse::columns, feed == "aircraft_aliases", select=c("c
 Aliases of FSE aircraft.
 }
 \seealso{
-Other FSE feeds: \code{\link{fse_aircraft_by_makemodel}},
-  \code{\link{fse_aircraft_by_owner_name}},
-  \code{\link{fse_aircraft_configs}},
-  \code{\link{fse_aircraft_for_sale}},
-  \code{\link{fse_aircraft_status_by_registration}},
-  \code{\link{fse_icao_jobs_from}},
-  \code{\link{fse_icao_jobs_to}}
+Other FSE feeds: 
+\code{\link{fse_aircraft_by_makemodel}()},
+\code{\link{fse_aircraft_by_owner_name}()},
+\code{\link{fse_aircraft_configs}()},
+\code{\link{fse_aircraft_for_sale}()},
+\code{\link{fse_aircraft_status_by_registration}()},
+\code{\link{fse_icao_jobs_from}()},
+\code{\link{fse_icao_jobs_to}()}
 }
+\concept{FSE feeds}
