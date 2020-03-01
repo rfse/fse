@@ -14,5 +14,5 @@ fse_aircraft_by_owner_name <- function(ownername, ...) {
     search="ownername",
     ownername=ownername,
     ...
-  )
+  )$content
 }
