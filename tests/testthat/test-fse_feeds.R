@@ -1,10 +1,11 @@
-context("Testing fse_aircraft_by_owner_name")
+context("Testing fse_aircraft_by_owner_name()")
 
 
 test_that("fse_aircraft_by_owner_name works silently", {
   expect_silent(
     r <- fse_aircraft_by_owner_name("skybike")
   )
+  expect_s3_class(r, "data.frame")
 })
 
 test_that("fse_aircraft_by_owner_name gives error for nonexisting user", {
@@ -14,3 +15,16 @@ test_that("fse_aircraft_by_owner_name gives error for nonexisting user", {
   )
 })
 
+
+
+
+
+
+context("Testing fse_aircraft_by_makemodel()")
+
+test_that("fse_aircraft_by_makemodel() works silently", {
+  expect_silent(
+    r <- fse_aircraft_by_makemodel("Cessna 172 Skyhawk")
+  )
+  expect_s3_class(r, "data.frame")
+})
