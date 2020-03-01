@@ -92,10 +92,6 @@ fse_api <- function(
     )
   }
 
-  tt <- content(resp, "text", encoding = "UTF-8")
-  xml_orig <- xml2::read_xml(tt)
-  fse_errors(xml_orig)
-
   # Check response type
   resp_type <- http_type(resp)
   expect_type <- c(
