@@ -6,7 +6,7 @@
 #'
 #' @export
 fse_icao_data <- function() {
-  u <- "http://server.fseconomy.net/static/library/datafeed_icaodata.zip"
+  u <- "https://server.fseconomy.net/static/library/datafeed_icaodata.zip"
   fname <- tempfile()
   on.exit(unlink(fname))
   utils::download.file(u, destfile=fname)
