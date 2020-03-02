@@ -33,10 +33,12 @@ test_that("fse_aircraft_by_makemodel() works silently", {
 
 
 
-context("")
+context("Test fse_aircraft_status_by_registration()")
 
 test_that("fse_aircraft_status_by_registration() works silently", {
   expect_silent(
     r <- fse_aircraft_status_by_registration("SP-4AX")
   )
+  expect_s3_class(r, "data.frame")
+  expect_equal(ncol(r), 4)
 })
