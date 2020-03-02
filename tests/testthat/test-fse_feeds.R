@@ -42,3 +42,26 @@ test_that("fse_aircraft_status_by_registration() works silently", {
   expect_s3_class(r, "data.frame")
   expect_equal(ncol(r), 4)
 })
+
+
+
+
+
+
+
+context("Test fse_icao_jobs_from()")
+
+test_that("fse_icao_jobs_from() works silently with one airport", {
+  expect_silent(
+    r <- fse_icao_jobs_from("EPWA")
+  )
+  expect_s3_class(r, "data.frame")
+})
+
+
+test_that("fse_icao_jobs_from() works silently with more than one airport", {
+  expect_silent(
+    r <- fse_icao_jobs_from(c("EPWA", "EPBC"))
+  )
+  expect_s3_class(r, "data.frame")
+})
