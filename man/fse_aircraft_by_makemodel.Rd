@@ -30,6 +30,7 @@ dropdown list after selecting "By model" radio button.
 \seealso{
 Other FSE feeds: 
 \code{\link{fse_aircraft_aliases}()},
+\code{\link{fse_aircraft_by_key}()},
 \code{\link{fse_aircraft_by_owner_name}()},
 \code{\link{fse_aircraft_configs}()},
 \code{\link{fse_aircraft_for_sale}()},

@@ -22,6 +22,7 @@ Jobs to specific airport.
 \seealso{
 Other FSE feeds: 
 \code{\link{fse_aircraft_aliases}()},
+\code{\link{fse_aircraft_by_key}()},
 \code{\link{fse_aircraft_by_makemodel}()},
 \code{\link{fse_aircraft_by_owner_name}()},
 \code{\link{fse_aircraft_configs}()},

@@ -24,6 +24,7 @@ List aircraft owned by a specific FSE user.
 \seealso{
 Other FSE feeds: 
 \code{\link{fse_aircraft_aliases}()},
+\code{\link{fse_aircraft_by_key}()},
 \code{\link{fse_aircraft_by_makemodel}()},
 \code{\link{fse_aircraft_configs}()},
 \code{\link{fse_aircraft_for_sale}()},
