@@ -14,13 +14,7 @@ Feed can return \code{data.frame} (default) or \code{xml_document} depending
 on the value of \code{format} (see \code{\link{fse_api}}). In either case the result will
 contain the following columns/tags:
 
-\Sexpr[results=verbatim,stage=render,echo=FALSE]{try(fse:::column_descriptions(''))}
-
-The object will have the following tags/columns:
-
-\Sexpr[results=rd,stage=build]{
-fse:::rd_data_frame(subset(fse::columns, feed == "aircraft_for_sale", select=c("column", "description")))
-}
+\Sexpr[results=verbatim,stage=render,echo=FALSE]{try(fse:::column_descriptions('aircraft_for_sale'))}
 }
 \description{
 Aircraft for Sale
