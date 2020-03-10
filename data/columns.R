@@ -28,8 +28,10 @@ columns <- merge(
         "aircraft_for_sale","LeasedFrom",
         "aircraft_for_sale","MonthlyFee",
         "aircraft_for_sale","FeeOwed",
+
         "aircraft_aliases", "MakeModel",
         "aircraft_aliases", "Alias",
+
         "aircraft_by_owner_name", "SerialNumber",
         "aircraft_by_owner_name", "MakeModel",
         "aircraft_by_owner_name", "Registration",
@@ -54,6 +56,7 @@ columns <- merge(
         "aircraft_by_owner_name", "LeasedFrom",
         "aircraft_by_owner_name", "MonthlyFee",
         "aircraft_by_owner_name", "FeeOwed",
+
         "aircraft_by_key", "SerialNumber",
         "aircraft_by_key", "MakeModel",
         "aircraft_by_key", "Registration",
@@ -77,7 +80,30 @@ columns <- merge(
         "aircraft_by_key", "TimeLast100hr",
         "aircraft_by_key", "LeasedFrom",
         "aircraft_by_key", "MonthlyFee",
-        "aircraft_by_key", "FeeOwed"
+        "aircraft_by_key", "FeeOwed",
+
+        "fbo_for_sale", "FboId",
+        "fbo_for_sale", "Status",
+        "fbo_for_sale", "Airport",
+        "fbo_for_sale", "Name",
+        "fbo_for_sale", "Owner",
+        "fbo_for_sale", "Icao",
+        "fbo_for_sale", "Location",
+        "fbo_for_sale", "Lots",
+        "fbo_for_sale", "RepairShop",
+        "fbo_for_sale", "Gates",
+        "fbo_for_sale", "GatesRented",
+        "fbo_for_sale", "Fuel100LL",
+        "fbo_for_sale", "FuelJetA",
+        "fbo_for_sale", "BuildingMaterials",
+        "fbo_for_sale", "Supplies",
+        "fbo_for_sale", "SuppliesPerDay",
+        "fbo_for_sale", "SuppliedDays",
+        "fbo_for_sale", "SellPrice",
+        "fbo_for_sale", "Fuel100LLGal",
+        "fbo_for_sale", "FuelJetAGal",
+        "fbo_for_sale", "Price100LLGal",
+        "fbo_for_sale", "PriceJetAGal"
       )
     ),
     stringsAsFactors = FALSE
