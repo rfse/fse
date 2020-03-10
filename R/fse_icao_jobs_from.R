@@ -2,6 +2,7 @@
 #'
 #' Jobs from specific airport.
 #'
+#' @templateVar feedname icao_jobs_from
 #' @template feed
 #'
 #' @export

@@ -152,7 +152,23 @@ columns <- merge(
         "fbo_for_sale", "Fuel100LLGal",
         "fbo_for_sale", "FuelJetAGal",
         "fbo_for_sale", "Price100LLGal",
-        "fbo_for_sale", "PriceJetAGal"
+        "fbo_for_sale", "PriceJetAGal",
+
+        "icao_jobs_from", "Id",
+        "icao_jobs_from", "Location",
+        "icao_jobs_from", "ToIcao",
+        "icao_jobs_from", "FromIcao",
+        "icao_jobs_from", "Amount",
+        "icao_jobs_from", "UnitType",
+        "icao_jobs_from", "Commodity",
+        "icao_jobs_from", "Pay",
+        "icao_jobs_from", "Expires",
+        "icao_jobs_from", "ExpireDateTime",
+        "icao_jobs_from", "Express",
+        "icao_jobs_from", "PtAssignment",
+        "icao_jobs_from", "Type",
+        "icao_jobs_from", "AircraftId"
+
       )
     ),
     stringsAsFactors = FALSE

@@ -14,7 +14,7 @@ Feed can return \code{data.frame} (default) or \code{xml_document} depending
 on the value of \code{format} (see \code{\link{fse_api}}). In either case the result will
 contain the following columns/tags:
 
-\Sexpr[results=verbatim,stage=render,echo=FALSE]{try(fse:::column_descriptions(''))}
+\Sexpr[results=verbatim,stage=render,echo=FALSE]{try(fse:::column_descriptions('icao_jobs_from'))}
 }
 \description{
 Jobs from specific airport.
