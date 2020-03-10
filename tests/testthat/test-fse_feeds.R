@@ -24,7 +24,7 @@ context("Testing fse_aircraft_by_makemodel()")
 
 test_that("fse_aircraft_by_makemodel() works silently", {
   expect_silent(
-    r <- fse_aircraft_by_makemodel("Cessna 172 Skyhawk")
+    r <- fse_aircraft_by_makemodel("Cessna 185 Skywagon")
   )
   expect_s3_class(r, "data.frame")
 })
@@ -64,16 +64,4 @@ test_that("fse_icao_jobs_from() works silently with more than one airport", {
     r <- fse_icao_jobs_from(c("EPWA", "EPBC"))
   )
   expect_s3_class(r, "data.frame")
-})
-
-
-
-
-
-
-
-context("Testing fse_fbo_by_key()")
-
-test_that("fse_fbo_by_key() returns a data frame", {
-
 })
