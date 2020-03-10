@@ -33,7 +33,7 @@ test_that("fse_aircraft_by_makemodel() works silently", {
 
 
 
-context("Test fse_aircraft_status_by_registration()")
+context("Testing fse_aircraft_status_by_registration()")
 
 test_that("fse_aircraft_status_by_registration() works silently", {
   expect_silent(
@@ -49,7 +49,7 @@ test_that("fse_aircraft_status_by_registration() works silently", {
 
 
 
-context("Test fse_icao_jobs_from()")
+context("Testing fse_icao_jobs_from()")
 
 test_that("fse_icao_jobs_from() works silently with one airport", {
   expect_silent(
@@ -64,4 +64,16 @@ test_that("fse_icao_jobs_from() works silently with more than one airport", {
     r <- fse_icao_jobs_from(c("EPWA", "EPBC"))
   )
   expect_s3_class(r, "data.frame")
+})
+
+
+
+
+
+
+
+context("Testing fse_fbo_by_key()")
+
+test_that("fse_fbo_by_key() returns a data frame", {
+
 })
