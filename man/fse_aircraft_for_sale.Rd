@@ -33,6 +33,7 @@ Other FSE feeds:
 \code{\link{fse_aircraft_by_owner_name}()},
 \code{\link{fse_aircraft_configs}()},
 \code{\link{fse_aircraft_status_by_registration}()},
+\code{\link{fse_assignments_by_key}()},
 \code{\link{fse_icao_jobs_from}()},
 \code{\link{fse_icao_jobs_to}()}
 }
