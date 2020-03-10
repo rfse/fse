@@ -39,6 +39,7 @@ Other FSE feeds:
 \code{\link{fse_aircraft_configs}()},
 \code{\link{fse_aircraft_for_sale}()},
 \code{\link{fse_assignments_by_key}()},
+\code{\link{fse_commodities_by_key}()},
 \code{\link{fse_icao_jobs_from}()},
 \code{\link{fse_icao_jobs_to}()}
 }
