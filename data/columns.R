@@ -188,7 +188,15 @@ columns <- merge(
         "LeasedFrom","Leasor",
         "MonthlyFee","Monthly maintenance fee",
         "FeeOwed", "Outstanding maintenace fee to be paid",
-        "Alias", "Aircraft alias"
+        "Alias", "Aircraft alias",
+        "Center1", "Capacity of Center1 tank",
+        "Center2", "Capacity of Center2 tank",
+        "Center3", "Capacity of Center3 tank",
+        "Crew", "Number of required crew",
+        "CruiseSpeed", "Aircraft cruise speed",
+        "EmptyWeight", "Aircraft empty weight",
+        "EnginePrice", NA,
+        "Engines", "Aircraft number of engines"
       )
     ),
     stringsAsFactors = FALSE
