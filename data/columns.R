@@ -192,5 +192,7 @@ columns <- merge(
       )
     ),
     stringsAsFactors = FALSE
-  )
+  ),
+
+  all = TRUE
 )

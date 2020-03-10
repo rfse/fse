@@ -2,7 +2,7 @@
 #'
 #' Data on all types of aircraft available in FSE.
 #'
-#' @template aircraft_configs
+#' @templateVar feedname aircraft_configs
 #' @template feed
 #'
 #' @export
