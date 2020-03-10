@@ -14,13 +14,7 @@ Feed can return \code{data.frame} (default) or \code{xml_document} depending
 on the value of \code{format} (see \code{\link{fse_api}}). In either case the result will
 contain the following columns/tags:
 
-\Sexpr[results=verbatim,stage=render,echo=FALSE]{try(fse:::column_descriptions(''))}
-
-The object will have the following tags/columns:
-
-\Sexpr[results=rd,stage=build]{
-fse:::rd_data_frame(subset(fse::columns, feed == "aircraft_aliases", select=c("column", "description")))
-}
+\Sexpr[results=verbatim,stage=render,echo=FALSE]{try(fse:::column_descriptions('aircraft_aliases'))}
 }
 \description{
 Aliases of FSE aircraft.
@@ -37,6 +31,7 @@ Other FSE feeds:
 \code{\link{fse_commodities_by_key}()},
 \code{\link{fse_facilities_by_key}()},
 \code{\link{fse_fbo_by_key}()},
+\code{\link{fse_fbo_for_sale}()},
 \code{\link{fse_icao_jobs_from}()},
 \code{\link{fse_icao_jobs_to}()}
 }
