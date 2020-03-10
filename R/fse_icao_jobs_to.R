@@ -13,5 +13,5 @@ fse_icao_jobs_to <- function(icaos, ...) {
     search="jobsto",
     icaos=icaos,
     ...
-  )
+  )$content
 }

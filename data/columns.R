@@ -167,7 +167,22 @@ columns <- merge(
         "icao_jobs_from", "Express",
         "icao_jobs_from", "PtAssignment",
         "icao_jobs_from", "Type",
-        "icao_jobs_from", "AircraftId"
+        "icao_jobs_from", "AircraftId",
+
+        "icao_jobs_to", "Id",
+        "icao_jobs_to", "Location",
+        "icao_jobs_to", "ToIcao",
+        "icao_jobs_to", "FromIcao",
+        "icao_jobs_to", "Amount",
+        "icao_jobs_to", "UnitType",
+        "icao_jobs_to", "Commodity",
+        "icao_jobs_to", "Pay",
+        "icao_jobs_to", "Expires",
+        "icao_jobs_to", "ExpireDateTime",
+        "icao_jobs_to", "Express",
+        "icao_jobs_to", "PtAssignment",
+        "icao_jobs_to", "Type",
+        "icao_jobs_to", "AircraftId"
 
       )
     ),
