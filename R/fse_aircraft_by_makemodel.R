@@ -8,6 +8,7 @@
 #' system WWW page, "Aircraft" menu, "Purchase aircraft" item and check the
 #' dropdown list after selecting "By model" radio button.
 #'
+#' @templateVar feedname aircraft_by_makemodel
 #' @template feed
 #'
 #' @export
