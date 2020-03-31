@@ -4,12 +4,14 @@
 \name{columns}
 \alias{columns}
 \title{Column metadata}
-\format{Data frame with three columns:
+\format{
+Data frame with three columns:
 \describe{
 \item{feed}{Feed name}
 \item{column}{Column name}
 \item{description}{Textual description}
-}}
+}
+}
 \description{
 Data frame storing descriptions of fields/columns returned by various feeds.
 }

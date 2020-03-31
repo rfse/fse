@@ -4,6 +4,3 @@
 \name{fse}
 \alias{fse}
 \title{fse: interfacing FSE data feeds}
-\description{
-fse: interfacing FSE data feeds
-}
