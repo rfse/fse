@@ -36,6 +36,7 @@ Other FSE feeds:
 \code{\link{fse_fbo_for_sale}()},
 \code{\link{fse_icao_jobs_from}()},
 \code{\link{fse_icao_jobs_to}()},
+\code{\link{fse_payments_by_monthyear}()},
 \code{\link{fse_payments_from_id}()},
 \code{\link{fse_statistics_by_key}()}
 }
