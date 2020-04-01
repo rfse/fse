@@ -2,8 +2,12 @@
 #'
 #' Data on all types of aircraft available in FSE.
 #'
-#' @templateVar feedname aircraft_configs
-#' @template feed
+#' @template feed2
+#'
+#' @return Object returned contains the following columns/tags:
+#'
+#' @return - `Crew`
+#' - `Seats`
 #'
 #' @export
 #'
