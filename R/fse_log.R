@@ -1,8 +1,8 @@
 #' Access FSE flight logs
 #'
-#' Functions for querying FSE flight logs.
+#' @description Functions for querying FSE flight logs.
 #'
-#' @description `fse_log_by_serial_from_id` queries flight log for specified
+#' @description - `fse_log_by_serial_from_id` queries flight log for specified
 #'   aircraft `serialnumber` and that have id greater than `formid`.
 #'
 #' @param serialnumber aircraft serial number
@@ -24,7 +24,9 @@ fse_log_by_serial_from_id <- function(serialnumber, fromid, ...) {
 }
 
 
-#' @describeIn fse_log `fse_log_by_key_from_id` queries flight log for entries
+#' @rdname fse_log
+#'
+#' @description - `fse_log_by_key_from_id` queries flight log for entries
 #'   for associated with `accesskey` with id numbers geater than `fromid`.
 #'
 #' @param accesskey group's read access key
@@ -44,7 +46,9 @@ fse_log_by_key_from_id <- function(accesskey, fromid, ...) {
 
 
 
-#' @describeIn fse_log `fse_log_by_reg_from_id_group` queries flight logs by key
+#' @rdname fse_log
+#'
+#' @description - `fse_log_by_reg_from_id_group` queries flight logs by key
 #'   for from id from all group aircraft. List all log entries for associated
 #'   with all the aircraft of group with `accesskey` and that have id number
 #'   higher than `fromid`.
@@ -63,7 +67,9 @@ fse_log_by_reg_from_id_group <- function(accesskey, fromid, ...) {
 }
 
 
-#' @describeIn fse_log `fse_log_by_reg_from_id` Flight log by aircraft
+#' @rdname fse_log
+#'
+#' @description - `fse_log_by_reg_from_id` Flight log by aircraft
 #'   registration number from Id. List all log entries for associated with the
 #'   aircraft with `aircraftreg` and that have id number higher than `fromid`.
 #'
