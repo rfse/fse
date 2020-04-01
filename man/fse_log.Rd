@@ -60,9 +60,6 @@ aircraft with \code{aircraftreg} and that have id number higher than \code{fromi
 \seealso{
 Other FSE feeds: 
 \code{\link{fse_aircraft_aliases}()},
-\code{\link{fse_aircraft_by_key}()},
-\code{\link{fse_aircraft_by_makemodel}()},
-\code{\link{fse_aircraft_by_owner_name}()},
 \code{\link{fse_aircraft_configs}()},
 \code{\link{fse_aircraft_for_sale}()},
 \code{\link{fse_aircraft_status_by_registration}()},

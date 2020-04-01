@@ -24,12 +24,10 @@ User statistics such as financials, number of flights and miles flown.
 \seealso{
 Other FSE feeds: 
 \code{\link{fse_aircraft_aliases}()},
-\code{\link{fse_aircraft_by_key}()},
-\code{\link{fse_aircraft_by_makemodel}()},
-\code{\link{fse_aircraft_by_owner_name}()},
 \code{\link{fse_aircraft_configs}()},
 \code{\link{fse_aircraft_for_sale}()},
 \code{\link{fse_aircraft_status_by_registration}()},
+\code{\link{fse_aircraft}},
 \code{\link{fse_assignments_by_key}()},
 \code{\link{fse_commodities_by_key}()},
 \code{\link{fse_facilities_by_key}()},
