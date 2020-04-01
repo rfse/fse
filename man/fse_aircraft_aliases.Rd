@@ -7,17 +7,26 @@
 fse_aircraft_aliases(...)
 }
 \arguments{
-\item{...}{other arguments passed to \code{\link{fse_api}}}
+\item{...}{other arguments passed to \code{\link[=fse_api]{fse_api()}}}
 }
 \value{
-Feed can return \code{data.frame} (default) or \code{xml_document} depending
-on the value of \code{format} (see \code{\link{fse_api}}). In either case the result will
-contain the following columns/tags:
+Feed function returns a \code{data.frame} (default) or \code{xml_document} depending on
+the value of \code{format} argument (see \code{fse_api} for details).
 
-\Sexpr[results=verbatim,stage=render,echo=FALSE]{try(fse:::column_descriptions('aircraft_aliases'))}
+Returned object has the following columns/tags:
+
+\itemize{
+\item \code{MakeModel} -- Aircraft model name
+\item \code{Alias} -- Alias
+}
 }
 \description{
 Aliases of FSE aircraft.
+}
+\examples{
+\dontrun{
+r <- fse_aircraft_aliases()
+}
 }
 \seealso{
 Other FSE feeds: 

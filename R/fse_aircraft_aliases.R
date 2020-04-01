@@ -2,10 +2,19 @@
 #'
 #' Aliases of FSE aircraft.
 #'
-#' @templateVar feedname aircraft_aliases
-#' @template feed
+#' @template feed2
+#'
+#' @return Returned object has the following columns/tags:
+#'
+#' @return - `MakeModel` -- Aircraft model name
+#' - `Alias` -- Alias
 #'
 #' @export
+#'
+#' @examples
+#' \dontrun{
+#' r <- fse_aircraft_aliases()
+#' }
 fse_aircraft_aliases <- function(...) {
   fse_api(
     query="aircraft",
