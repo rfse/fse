@@ -19,6 +19,11 @@ contain the following columns/tags:
 \description{
 Data on all types of aircraft available in FSE.
 }
+\examples{
+\dontrun{
+r <- fse_aircraft_configs()
+}
+}
 \seealso{
 Other FSE feeds: 
 \code{\link{fse_aircraft_aliases}()},
