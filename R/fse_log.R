@@ -10,8 +10,41 @@
 #'
 #' @template feed2
 #'
+#' @return All these functions return data.frame/XML with the following
+#'   columns/tags:
+#'
+#' @return - `Id` -- Log entry id
+#' - `Type` -- Entry type
+#' - `Time` -- Time as `yyyy/mm/dd`
+#' - `Distance` -- If `Type = flight` distance flown, `0` otherwise
+#' - `Pilot` -- Pilot name
+#' - `SerialNumber` -- Aircraft serial number
+#' - `Aircraft` -- Registration id
+#' - `MakeModel` -- Aircraft make and model
+#' - `From` -- ICAO from
+#' - `To` -- ICAO to
+#' - `TotalEngineTime` -- Total engine time as `hh:mm`
+#' - `FlightTime` -- Flight time as `hh:mm`
+#' - `GroupName` -- For group flights the group name or `""` otherwise
+#' - `Income`
+#' - `PilotFee`
+#' - `CrewCost`
+#' - `BookingFee`
+#' - `Bonus`
+#' - `FuelCost`
+#' - `GCF` -- ?
+#' - `RentalPrice`
+#' - `RentalType` -- ("hoobs); ("tacho")
+#' - `RentalUnits` --
+#' - `RentalCost`
+#'
 #' @name fse_log
 #' @export
+#'
+#' @examples
+#' \dontrun{
+#' r <- fse_log_by_serial_from_id(32019, 1)
+#' }
 
 fse_log_by_serial_from_id <- function(serialnumber, fromid, ...) {
   fse_api(

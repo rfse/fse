@@ -30,6 +30,36 @@ fse_log_by_reg_from_id(aircraftreg, fromid, ...)
 \value{
 Feed function returns a \code{data.frame} (default) or \code{xml_document} depending on
 the value of \code{format} argument (see \code{fse_api} for details).
+
+All these functions return data.frame/XML with the following
+columns/tags:
+
+\itemize{
+\item \code{Id} -- Log entry id
+\item \code{Type} -- Entry type
+\item \code{Time} -- Time as \code{yyyy/mm/dd}
+\item \code{Distance} -- If \code{Type = flight} distance flown, \code{0} otherwise
+\item \code{Pilot} -- Pilot name
+\item \code{SerialNumber} -- Aircraft serial number
+\item \code{Aircraft} -- Registration id
+\item \code{MakeModel} -- Aircraft make and model
+\item \code{From} -- ICAO from
+\item \code{To} -- ICAO to
+\item \code{TotalEngineTime} -- Total engine time as \code{hh:mm}
+\item \code{FlightTime} -- Flight time as \code{hh:mm}
+\item \code{GroupName} -- For group flights the group name or \code{""} otherwise
+\item \code{Income}
+\item \code{PilotFee}
+\item \code{CrewCost}
+\item \code{BookingFee}
+\item \code{Bonus}
+\item \code{FuelCost}
+\item \code{GCF} -- ?
+\item \code{RentalPrice}
+\item \code{RentalType} -- ("hoobs); ("tacho")
+\item \code{RentalUnits} --
+\item \code{RentalCost}
+}
 }
 \description{
 Functions for querying FSE flight logs.
@@ -55,6 +85,11 @@ higher than \code{fromid}.
 \item \code{fse_log_by_reg_from_id} Flight log by aircraft
 registration number from Id. List all log entries for associated with the
 aircraft with \code{aircraftreg} and that have id number higher than \code{fromid}.
+}
+}
+\examples{
+\dontrun{
+r <- fse_log_by_serial_from_id(32019, 1)
 }
 }
 \seealso{

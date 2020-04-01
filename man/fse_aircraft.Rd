@@ -30,8 +30,8 @@ All these function return data.frame/XML with the following columns/tags:
 
 \itemize{
 \item \code{SerialNumber} -- Aircraft serial number
-\item \code{MakeModel} - Aircraft model name
-\item \code{Registration} - Registration number
+\item \code{MakeModel} -- Aircraft model name
+\item \code{Registration} -- Registration number
 \item \code{Owner}
 \item \code{Location}
 \item \code{LocationName}
