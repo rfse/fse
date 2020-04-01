@@ -129,6 +129,11 @@ fse_log_by_reg_from_id <- function(aircraftreg, fromid, ...) {
 #'   serial number, year and month.
 #'
 #' @export
+#'
+#' @examples
+#' \dontrun{
+#' r <- fse_log_by_serial_monthyear(6930, 2016, 4)
+#' }
 fse_log_by_serial_monthyear <- function(serialnumber, year, month, ...) {
   fse_api(
     query = "flightlogs",

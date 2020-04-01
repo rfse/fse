@@ -6,6 +6,7 @@
 \alias{fse_log_by_key_from_id}
 \alias{fse_log_by_reg_from_id_group}
 \alias{fse_log_by_reg_from_id}
+\alias{fse_log_by_serial_monthyear}
 \title{Query FSE flight logs}
 \usage{
 fse_log_by_serial_from_id(serialnumber, fromid, ...)
@@ -15,6 +16,8 @@ fse_log_by_key_from_id(accesskey, fromid, ...)
 fse_log_by_reg_from_id_group(accesskey, fromid, ...)
 
 fse_log_by_reg_from_id(aircraftreg, fromid, ...)
+
+fse_log_by_serial_monthyear(serialnumber, year, month, ...)
 }
 \arguments{
 \item{serialnumber}{aircraft serial number}
@@ -86,10 +89,16 @@ higher than \code{fromid}.
 registration number from Id. List all log entries for associated with the
 aircraft with \code{aircraftreg} and that have id number higher than \code{fromid}.
 }
+
+\code{fse_log_by_serial_monthyear} -- Query flight logs by aircraft
+serial number, year and month.
 }
 \examples{
 \dontrun{
 r <- fse_log_by_serial_from_id(32019, 1)
+}
+\dontrun{
+r <- fse_log_by_serial_monthyear(6930, 2016, 4)
 }
 }
 \seealso{
