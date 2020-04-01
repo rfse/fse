@@ -1,4 +1,4 @@
-#' Access FSE flight logs
+#' Query FSE flight logs
 #'
 #' @description Functions for querying FSE flight logs.
 #'

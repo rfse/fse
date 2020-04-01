@@ -6,7 +6,7 @@
 \alias{fse_log_by_key_from_id}
 \alias{fse_log_by_reg_from_id_group}
 \alias{fse_log_by_reg_from_id}
-\title{Access FSE flight logs}
+\title{Query FSE flight logs}
 \usage{
 fse_log_by_serial_from_id(serialnumber, fromid, ...)
 
@@ -21,15 +21,15 @@ fse_log_by_reg_from_id(aircraftreg, fromid, ...)
 
 \item{fromid}{log entry id}
 
-\item{...}{other arguments passed to \code{\link{fse_api}}}
+\item{...}{other arguments passed to \code{\link[=fse_api]{fse_api()}}}
 
 \item{accesskey}{group's read access key}
 
 \item{aircraftreg}{aircraft registration number}
 }
 \value{
-Feed can return \code{data.frame} (default) or \code{xml_document} depending
-on the value of \code{format} (see \code{\link{fse_api}}).
+Feed function returns a \code{data.frame} (default) or \code{xml_document} depending on
+the value of \code{format} argument (see \code{fse_api} for details).
 }
 \description{
 Functions for querying FSE flight logs.
@@ -66,6 +66,7 @@ Other FSE feeds:
 \code{\link{fse_aircraft_configs}()},
 \code{\link{fse_aircraft_for_sale}()},
 \code{\link{fse_aircraft_status_by_registration}()},
+\code{\link{fse_aircraft}},
 \code{\link{fse_assignments_by_key}()},
 \code{\link{fse_commodities_by_key}()},
 \code{\link{fse_facilities_by_key}()},
