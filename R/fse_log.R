@@ -125,7 +125,7 @@ fse_log_by_reg_from_id <- function(aircraftreg, fromid, ...) {
 
 #' @rdname fse_log
 #'
-#' @description `fse_log_by_serial_monthyear` -- Query flight logs by aircraft
+#' @description - `fse_log_by_serial_monthyear` -- Query flight logs by aircraft
 #'   serial number, year and month.
 #'
 #' @export
@@ -139,6 +139,31 @@ fse_log_by_serial_monthyear <- function(serialnumber, year, month, ...) {
     query = "flightlogs",
     search = "monthyear",
     serialnumber = serialnumber,
+    month = month,
+    year = year,
+    ...
+  )$content
+}
+
+
+
+
+#' @rdname fse_log
+#'
+#' @description - `fse_log_by_reg_monthyear` -- Query flight logs by aircraft
+#'   serial number, year and month.
+#'
+#' @export
+#'
+#' @examples
+#' \dontrun{
+#' r <- fse_log_by_reg_monthyear("SP-4AX", 2020, 2)
+#' }
+fse_log_by_reg_monthyear <- function(aircraftreg, year, month, ...) {
+  fse_api(
+    query = "flightlogs",
+    search = "monthyear",
+    aircraftreg = aircraftreg,
     month = month,
     year = year,
     ...
