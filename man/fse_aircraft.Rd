@@ -14,13 +14,7 @@ fse_aircraft_by_key(accesskey, ...)
 fse_aircraft_by_owner_name(ownername, ...)
 }
 \arguments{
-\item{makemodel}{character, aircraft model name, see Details
-
-For \code{\link[=fse_aircraft_by_makemodel]{fse_aircraft_by_makemodel()}}, to get a list of valid model names that
-can be submitted to \code{makemodel} fetch aircraft configs with
-\code{\link{fse_aicraft_configs}} or go to FSE system WWW page, "Aircraft"
-menu, "Purchase aircraft" item and check the dropdown list after selecting
-"By model" radio button.}
+\item{makemodel}{character, aircraft model name, see Details}
 
 \item{...}{other arguments passed to \code{\link[=fse_api]{fse_api()}}}
 
@@ -31,12 +25,40 @@ menu, "Purchase aircraft" item and check the dropdown list after selecting
 \value{
 Feed function returns a \code{data.frame} (default) or \code{xml_document} depending on
 the value of \code{format} argument (see \code{fse_api} for details).
+
+All these function return data.frame/XML with the following columns/tags:
+
+\itemize{
+\item \code{SerialNumber} -- Aircraft serial number
+\item \code{MakeModel} - Aircraft model name
+\item \code{Registration} - Registration number
+\item \code{Owner}
+\item \code{Location}
+\item \code{LocationName}
+\item \code{Home}
+\item \code{SalePrice}
+\item \code{SellbackPrice}
+\item \code{Equipment}
+\item \code{RentalDry}
+\item \code{RentalWet}
+\item \code{Bonus}
+\item \code{RentalTime}
+\item \code{RentedBy}
+\item \code{PctFuel}
+\item \code{NeedsRepair}
+\item \code{AirframeTime}
+\item \code{EngineTime}
+\item \code{TimeLast100hr}
+\item \code{LeasedFrom}
+\item \code{MonthlyFee}
+\item \code{FeeOwed}
+}
 }
 \description{
 Functions for querying FSE aircraft.
 
 \itemize{
-\item \code{fse_airceaft_by_makemodel} queries aircraft by model name
+\item \code{fse_aircraft_by_makemodel} queries aircraft by model name
 }
 
 \itemize{
@@ -46,6 +68,18 @@ FSE read access key
 
 \itemize{
 \item \code{fse_aircraft_by_owner_name} query aircraft by owner name
+}
+}
+\details{
+For \code{\link[=fse_aircraft_by_makemodel]{fse_aircraft_by_makemodel()}}, to get a list of valid model
+names that can be submitted to \code{makemodel} fetch aircraft configs with
+\code{\link{fse_aicraft_configs}} or go to FSE system WWW page, "Aircraft"
+menu, "Purchase aircraft" item and check the dropdown list after selecting
+"By model" radio button.
+}
+\examples{
+\dontrun{
+r <- fse_aircraft_by_makemodel("Cessna 172 Skyhawk")
 }
 }
 \seealso{
