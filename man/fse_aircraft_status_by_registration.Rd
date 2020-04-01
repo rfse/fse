@@ -18,8 +18,14 @@ contain the following columns/tags:
 
 \Sexpr[results=verbatim,stage=render,echo=FALSE]{try(fse:::column_descriptions(''))}
 
-This function only returns object with content as \code{xml_document} that
-can be processed with \pkg{xml2}.
+Data.frame/XML with columns/tags:
+
+\itemize{
+\item \code{Registration} -- Aircraft registration
+\item \code{SerialNumber} -- Aircraft serial number
+\item \code{Status} -- Aircraft status: ("On Ground")
+\item \code{Location} -- ICAO airport code if aircraft is "On Ground"
+}
 }
 \description{
 Lookup the status of a particular aircraft. Only available as an XML.
@@ -27,7 +33,7 @@ Lookup the status of a particular aircraft. Only available as an XML.
 \examples{
 \dontrun{
 r <- fse_aircraft_status_by_registration(483514)
-xml2::xml_structure(r)
+r <- fse_aircraft_status_by_registration("SP-4AX")
 }
 }
 \seealso{

@@ -6,16 +6,19 @@
 #'
 #' @template feed
 #'
-#' @return
-#' This function only returns object with content as \code{xml_document} that
-#' can be processed with \pkg{xml2}.
+#' @return Data.frame/XML with columns/tags:
+#'
+#' @return - `Registration` -- Aircraft registration
+#' - `SerialNumber` -- Aircraft serial number
+#' - `Status` -- Aircraft status: ("On Ground")
+#' - `Location` -- ICAO airport code if aircraft is "On Ground"
 #'
 #' @export
 #'
 #' @examples
 #' \dontrun{
 #' r <- fse_aircraft_status_by_registration(483514)
-#' xml2::xml_structure(r)
+#' r <- fse_aircraft_status_by_registration("SP-4AX")
 #' }
 fse_aircraft_status_by_registration <- function(aircraftreg, ...) {
   r <- fse_api(
