@@ -7,17 +7,48 @@
 fse_aircraft_for_sale(...)
 }
 \arguments{
-\item{...}{other arguments passed to \code{\link{fse_api}}}
+\item{...}{other arguments passed to \code{\link[=fse_api]{fse_api()}}}
 }
 \value{
-Feed can return \code{data.frame} (default) or \code{xml_document} depending
-on the value of \code{format} (see \code{\link{fse_api}}). In either case the result will
-contain the following columns/tags:
+Feed function returns a \code{data.frame} (default) or \code{xml_document} depending on
+the value of \code{format} argument (see \code{fse_api} for details).
 
-\Sexpr[results=verbatim,stage=render,echo=FALSE]{try(fse:::column_descriptions('aircraft_for_sale'))}
+The return object contains the following columns/tags:
+
+\itemize{
+\item \code{SerialNumber}
+\item \code{MakeModel}
+\item \code{Registration}
+\item \code{Owner}
+\item \code{Location}
+\item \code{LocationName}
+\item \code{Home}
+\item \code{SalePrice}
+\item \code{SellbackPrice}
+\item \code{Equipment}
+\item \code{RentalDry}
+\item \code{RentalWet}
+\item \code{RentalType}
+\item \code{Bonus}
+\item \code{RentalTime}
+\item \code{RentedBy}
+\item \code{PctFuel}
+\item \code{NeedsRepair}
+\item \code{AirframeTime}
+\item \code{EngineTime}
+\item \code{TimeLast100hr}
+\item \code{LeasedFrom}
+\item \code{MonthlyFee}
+\item \code{FeeOwed}
+}
 }
 \description{
-Aircraft for Sale
+List of aircraft currently for sale.
+}
+\examples{
+\dontrun{
+r <- fse_aircraft_for_sale()
+}
 }
 \seealso{
 Other FSE feeds: 
