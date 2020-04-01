@@ -21,7 +21,7 @@ contain the following columns/tags:
 \Sexpr[results=verbatim,stage=render,echo=FALSE]{try(fse:::column_descriptions('payments_by_monthyear'))}
 }
 \description{
-List of financial operations of user with `accesskey` in specified `year` and `month`
+List of financial operations of user with \code{accesskey} in specified \code{year} and \code{month}
 }
 \seealso{
 Other FSE feeds: 
@@ -42,10 +42,7 @@ Other FSE feeds:
 \code{\link{fse_icao_fbos}()},
 \code{\link{fse_icao_jobs_from}()},
 \code{\link{fse_icao_jobs_to}()},
-\code{\link{fse_log_by_key_from_id}()},
-\code{\link{fse_log_by_reg_from_id_group}()},
-\code{\link{fse_log_by_reg_from_id}()},
-\code{\link{fse_log_by_serial_from_id}()},
+\code{\link{fse_log}},
 \code{\link{fse_payments_from_id}()},
 \code{\link{fse_statistics_by_key}()}
 }

@@ -19,7 +19,7 @@ contain the following columns/tags:
 \Sexpr[results=verbatim,stage=render,echo=FALSE]{try(fse:::column_descriptions('icao_fbos'))}
 }
 \description{
-List members of a FSE group identified by the `accesskey`
+List members of a FSE group identified by the \code{accesskey}
 }
 \seealso{
 Other FSE feeds: 
@@ -39,10 +39,7 @@ Other FSE feeds:
 \code{\link{fse_icao_fbos}()},
 \code{\link{fse_icao_jobs_from}()},
 \code{\link{fse_icao_jobs_to}()},
-\code{\link{fse_log_by_key_from_id}()},
-\code{\link{fse_log_by_reg_from_id_group}()},
-\code{\link{fse_log_by_reg_from_id}()},
-\code{\link{fse_log_by_serial_from_id}()},
+\code{\link{fse_log}},
 \code{\link{fse_payments_by_monthyear}()},
 \code{\link{fse_payments_from_id}()},
 \code{\link{fse_statistics_by_key}()}

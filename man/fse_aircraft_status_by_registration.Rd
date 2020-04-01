@@ -48,10 +48,7 @@ Other FSE feeds:
 \code{\link{fse_icao_fbos}()},
 \code{\link{fse_icao_jobs_from}()},
 \code{\link{fse_icao_jobs_to}()},
-\code{\link{fse_log_by_key_from_id}()},
-\code{\link{fse_log_by_reg_from_id_group}()},
-\code{\link{fse_log_by_reg_from_id}()},
-\code{\link{fse_log_by_serial_from_id}()},
+\code{\link{fse_log}},
 \code{\link{fse_payments_by_monthyear}()},
 \code{\link{fse_payments_from_id}()},
 \code{\link{fse_statistics_by_key}()}
