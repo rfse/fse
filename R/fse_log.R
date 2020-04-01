@@ -119,3 +119,23 @@ fse_log_by_reg_from_id <- function(aircraftreg, fromid, ...) {
     ...
   )$content
 }
+
+
+
+
+#' @rdname fse_log
+#'
+#' @description `fse_log_by_serial_monthyear` -- Query flight logs by aircraft
+#'   serial number, year and month.
+#'
+#' @export
+fse_log_by_serial_monthyear <- function(serialnumber, year, month, ...) {
+  fse_api(
+    query = "flightlogs",
+    search = "monthyear",
+    serialnumber = serialnumber,
+    month = month,
+    year = year,
+    ...
+  )$content
+}
