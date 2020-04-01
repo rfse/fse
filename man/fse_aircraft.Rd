@@ -5,6 +5,7 @@
 \alias{fse_aircraft_by_makemodel}
 \alias{fse_aircraft_by_key}
 \alias{fse_aircraft_by_owner_name}
+\alias{fse_icao_aircraft}
 \title{Query FSE aircraft}
 \usage{
 fse_aircraft_by_makemodel(makemodel, ...)
@@ -12,6 +13,8 @@ fse_aircraft_by_makemodel(makemodel, ...)
 fse_aircraft_by_key(accesskey, ...)
 
 fse_aircraft_by_owner_name(ownername, ...)
+
+fse_icao_aircraft(icao, ...)
 }
 \arguments{
 \item{makemodel}{character, aircraft model name, see Details}
@@ -21,6 +24,8 @@ fse_aircraft_by_owner_name(ownername, ...)
 \item{accesskey}{FSE read access key}
 
 \item{ownername}{character, FSE account name}
+
+\item{icao}{airport ICAO code}
 }
 \value{
 Feed function returns a \code{data.frame} (default) or \code{xml_document} depending on
@@ -69,6 +74,10 @@ FSE read access key
 \itemize{
 \item \code{fse_aircraft_by_owner_name} query aircraft by owner name
 }
+
+\itemize{
+\item \code{fse_icao_aircraft} -- List of aircraft at ICAO
+}
 }
 \details{
 For \code{\link[=fse_aircraft_by_makemodel]{fse_aircraft_by_makemodel()}}, to get a list of valid model
@@ -80,6 +89,9 @@ menu, "Purchase aircraft" item and check the dropdown list after selecting
 \examples{
 \dontrun{
 r <- fse_aircraft_by_makemodel("Cessna 172 Skyhawk")
+}
+\dontrun{
+r <- fse_icao_aircraft("epbc")
 }
 }
 \seealso{
@@ -94,7 +106,6 @@ Other FSE feeds:
 \code{\link{fse_fbo_by_key}()},
 \code{\link{fse_fbo_for_sale}()},
 \code{\link{fse_group_members}()},
-\code{\link{fse_icao_aircraft}()},
 \code{\link{fse_icao_fbos}()},
 \code{\link{fse_icao_jobs_from}()},
 \code{\link{fse_icao_jobs_to}()},

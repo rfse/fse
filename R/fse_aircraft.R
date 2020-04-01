@@ -95,3 +95,26 @@ fse_aircraft_by_owner_name <- function(ownername, ...) {
     ...
   )$content
 }
+
+
+#' @rdname fse_aircraft
+#'
+#' @description - `fse_icao_aircraft` -- List of aircraft at ICAO
+#'
+#' @param icao airport ICAO code
+#'
+#' @export
+#'
+#' @examples
+#' \dontrun{
+#' r <- fse_icao_aircraft("epbc")
+#' }
+fse_icao_aircraft <- function(icao, ...) {
+  fse_api(
+    query="icao",
+    search="aircraft",
+    icao = icao,
+    ...
+  )$content
+}
+

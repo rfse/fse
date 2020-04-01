@@ -33,7 +33,6 @@ Other FSE feeds:
 \code{\link{fse_facilities_by_key}()},
 \code{\link{fse_fbo_by_key}()},
 \code{\link{fse_fbo_for_sale}()},
-\code{\link{fse_icao_aircraft}()},
 \code{\link{fse_icao_fbos}()},
 \code{\link{fse_icao_jobs_from}()},
 \code{\link{fse_icao_jobs_to}()},
