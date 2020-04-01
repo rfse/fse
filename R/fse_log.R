@@ -151,7 +151,7 @@ fse_log_by_serial_monthyear <- function(serialnumber, year, month, ...) {
 #' @rdname fse_log
 #'
 #' @description - `fse_log_by_reg_monthyear` -- Query flight logs by aircraft
-#'   serial number, year and month.
+#'   registration number, year and month.
 #'
 #' @export
 #'
@@ -164,6 +164,24 @@ fse_log_by_reg_monthyear <- function(aircraftreg, year, month, ...) {
     query = "flightlogs",
     search = "monthyear",
     aircraftreg = aircraftreg,
+    month = month,
+    year = year,
+    ...
+  )$content
+}
+
+
+#' @rdname fse_log
+#'
+#' @description - `fse_log_by_key_monthyear` -- Query flight logs by FSE access
+#'   key, year and month.
+#'
+#' @export
+fse_log_by_key_monthyear <- function(accesskey, year, month, ...) {
+  fse_api(
+    query = "flightlogs",
+    search = "monthyear",
+    readaccesskey = accesskey,
     month = month,
     year = year,
     ...

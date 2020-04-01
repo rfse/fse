@@ -8,6 +8,7 @@
 \alias{fse_log_by_reg_from_id}
 \alias{fse_log_by_serial_monthyear}
 \alias{fse_log_by_reg_monthyear}
+\alias{fse_log_by_key_monthyear}
 \title{Query FSE flight logs}
 \usage{
 fse_log_by_serial_from_id(serialnumber, fromid, ...)
@@ -21,6 +22,8 @@ fse_log_by_reg_from_id(aircraftreg, fromid, ...)
 fse_log_by_serial_monthyear(serialnumber, year, month, ...)
 
 fse_log_by_reg_monthyear(aircraftreg, year, month, ...)
+
+fse_log_by_key_monthyear(accesskey, year, month, ...)
 }
 \arguments{
 \item{serialnumber}{aircraft serial number}
@@ -100,7 +103,12 @@ serial number, year and month.
 
 \itemize{
 \item \code{fse_log_by_reg_monthyear} -- Query flight logs by aircraft
-serial number, year and month.
+registration number, year and month.
+}
+
+\itemize{
+\item \code{fse_log_by_key_monthyear} -- Query flight logs by FSE access
+key, year and month.
 }
 }
 \examples{
