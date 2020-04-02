@@ -1,4 +1,6 @@
-#' fse: interfacing FSE data feeds
+#' Interfacing FSE data feeds
+#'
+#' Functions digesting FSE data feeds.
 #'
 #' @docType package
 #' @name fse

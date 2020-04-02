@@ -3,4 +3,7 @@
 \docType{package}
 \name{fse}
 \alias{fse}
-\title{fse: interfacing FSE data feeds}
+\title{Interfacing FSE data feeds}
+\description{
+Functions digesting FSE data feeds.
+}
