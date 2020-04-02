@@ -41,6 +41,9 @@ fse_api <- function(
   ...,
   content_as="parsed"
 ) {
+
+  cl <- match.call()
+
   # Process arguments
   query <- match.arg(query)
   search <- match.arg(search)
@@ -63,6 +66,7 @@ fse_api <- function(
     other_args
   )
 
+  # Acquire access key
   k <- fse_ak()
   if(inherits(k, "service")) {
     arglist$servicekey <- as.character(k)
@@ -70,11 +74,12 @@ fse_api <- function(
     arglist$userkey <- as.character(k)
   }
 
+
+  # Construct the URL from the arguments
   url <- modify_url(
     url = "https://server.fseconomy.net/data",
     query = arglist
     )
-  # return(url)
 
   # Make user agent
   ua <- user_agent(paste0(
@@ -90,10 +95,17 @@ fse_api <- function(
   if( http_error(resp) ) {
     stop(
       sprintf(
-        "FSE request failed [%s]",
+        "FSE request failed with HTTP error [%s]",
         status_code(resp)
       )
     )
+  }
+
+  # Catch possible FSE API errors
+  k <- fse_error(resp)
+  if(is.condition(k)) {
+    k$call <- cl
+    stop(k)
   }
 
   # Check response type

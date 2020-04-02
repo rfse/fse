@@ -46,21 +46,6 @@ rd_data_frame <- function(d) {
 
 
 
-# Simple condition --------------------------------------------------------
-
-# Simple condition generator as shown here
-# http://adv-r.had.co.nz/Exceptions-Debugging.html#condition-handling
-condition <- function(subclass, message, call = sys.call(-1), ...) {
-  structure(
-    class = unique(c(subclass, "condition")),
-    list(message = message, call = call),
-    ...
-  )
-}
-
-# is it a condition?
-is.condition <- function(x) inherits(x, "condition")
-
 
 
 
