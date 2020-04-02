@@ -4,7 +4,7 @@
 #'
 #' @param aircraftreg aircraft registration number
 #'
-#' @template feed
+#' @template feed2
 #'
 #' @return Data.frame/XML with columns/tags:
 #'

@@ -9,14 +9,11 @@ fse_aircraft_status_by_registration(aircraftreg, ...)
 \arguments{
 \item{aircraftreg}{aircraft registration number}
 
-\item{...}{other arguments passed to \code{\link{fse_api}}}
+\item{...}{other arguments passed to \code{\link[=fse_api]{fse_api()}}}
 }
 \value{
-Feed can return \code{data.frame} (default) or \code{xml_document} depending
-on the value of \code{format} (see \code{\link{fse_api}}). In either case the result will
-contain the following columns/tags:
-
-\Sexpr[results=verbatim,stage=render,echo=FALSE]{try(fse:::column_descriptions(''))}
+Feed function returns a \code{data.frame} (default) or \code{xml_document} depending on
+the value of \code{format} argument (see \code{fse_api} for details).
 
 Data.frame/XML with columns/tags:
 

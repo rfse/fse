@@ -34,7 +34,7 @@ as_fse_key(x, ...)
 \item{use}{type of key to use. Expects \code{"service"}, \code{"personal"} or \code{"auto"}
 (default).}
 
-\item{key}{FSE key}
+\item{key}{character scalar with FSE key}
 
 \item{x}{for the \code{\link[=print]{print()}} method, object inheriting from class "fse_key".
 For \code{as_fse_key} object coercible to character interpreted as FSE
