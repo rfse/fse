@@ -1,5 +1,5 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
-^scrapbook\.R^
+^scrapbook\.R$
 ^man-roxygen$
 ^data-raw$
