@@ -1,7 +1,6 @@
 #' Query FSE FBOs
 #'
-#' @description These function query FSE FBOs using accesskey or those that are
-#'   currently for sale.
+#' @description These function query FSE FBOs:
 #'
 #' @description - [fse_fbo_by_key()] -- list of FBOs belonging to the provided read access key.
 #'
@@ -60,6 +59,25 @@ fse_fbo_for_sale <- function(...) {
   fse_api(
     query = "fbos",
     search = "forsale",
+    ...
+  )$content
+}
+
+
+
+
+
+#' @rdname fse_fbo
+#'
+#' @description - [fse_icao_fbos()] - list FBOs present at an airport
+#'
+#' @export
+
+fse_icao_fbos <- function(icao, ...) {
+  fse_api(
+    query="icao",
+    search="fbo",
+    icao = icao,
     ...
   )$content
 }

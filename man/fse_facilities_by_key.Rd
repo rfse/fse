@@ -44,7 +44,6 @@ Other FSE feeds:
 \code{\link{fse_commodities_by_key}()},
 \code{\link{fse_fbo}},
 \code{\link{fse_group_members}()},
-\code{\link{fse_icao_fbos}()},
 \code{\link{fse_icao_jobs_from}()},
 \code{\link{fse_icao_jobs_to}()},
 \code{\link{fse_log}},

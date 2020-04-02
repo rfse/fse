@@ -4,11 +4,14 @@
 \alias{fse_fbo}
 \alias{fse_fbo_by_key}
 \alias{fse_fbo_for_sale}
+\alias{fse_icao_fbos}
 \title{Query FSE FBOs}
 \usage{
 fse_fbo_by_key(accesskey, ...)
 
 fse_fbo_for_sale(...)
+
+fse_icao_fbos(icao, ...)
 }
 \arguments{
 \item{accesskey}{FSE read access key}
@@ -47,8 +50,7 @@ The object with the following columns/tags:
 }
 }
 \description{
-These function query FSE FBOs using accesskey or those that are
-currently for sale.
+These function query FSE FBOs:
 
 \itemize{
 \item \code{\link[=fse_fbo_by_key]{fse_fbo_by_key()}} -- list of FBOs belonging to the provided read access key.
@@ -56,6 +58,10 @@ currently for sale.
 
 \itemize{
 \item \code{\link[=fse_fbo_for_sale]{fse_fbo_for_sale()}} - list of FBOs for sale
+}
+
+\itemize{
+\item \code{\link[=fse_icao_fbos]{fse_icao_fbos()}} - list FBOs present at an airport
 }
 }
 \seealso{
@@ -69,7 +75,6 @@ Other FSE feeds:
 \code{\link{fse_commodities_by_key}()},
 \code{\link{fse_facilities_by_key}()},
 \code{\link{fse_group_members}()},
-\code{\link{fse_icao_fbos}()},
 \code{\link{fse_icao_jobs_from}()},
 \code{\link{fse_icao_jobs_to}()},
 \code{\link{fse_log}},
