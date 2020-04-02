@@ -34,8 +34,7 @@ Other FSE feeds:
 \code{\link{fse_fbo}},
 \code{\link{fse_jobs}},
 \code{\link{fse_log}},
-\code{\link{fse_payments_by_monthyear}()},
-\code{\link{fse_payments_from_id}()},
+\code{\link{fse_payments}},
 \code{\link{fse_statistics_by_key}()}
 }
 \concept{FSE feeds}
