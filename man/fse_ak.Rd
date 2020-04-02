@@ -39,6 +39,10 @@ as_fse_key(x, ...)
 \item{x}{for the \code{\link[=print]{print()}} method, object inheriting from class "fse_key".
 For \code{as_fse_key} object coercible to character interpreted as FSE
 access key.}
+
+\item{...}{other arguments passed to/from other methods}
+
+\item{type}{type of the key supplied, one of "personal" or "service"}
 }
 \value{
 Function \code{\link[=fse_ak]{fse_ak()}} returns the access key or throws an error if non is found.

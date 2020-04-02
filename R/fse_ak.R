@@ -101,6 +101,7 @@ set_fse_sk <- function(key) {
 #' @param x for the [print()] method, object inheriting from class "fse_key".
 #'   For `as_fse_key` object coercible to character interpreted as FSE
 #'   access key.
+#' @param ... other arguments passed to/from other methods
 #'
 #' @export
 print.fse_key <- function(x, ...) {
@@ -123,6 +124,9 @@ print.fse_key <- function(x, ...) {
 as_fse_key <- function(x, ...) UseMethod("as_fse_key")
 
 #' @method as_fse_key character
+#'
+#' @param type type of the key supplied, one of "personal" or "service"
+#'
 #' @rdname fse_ak
 as_fse_key.character <- function(x, type=c("personal", "service")) {
   stopifnot(!is.na(x))
