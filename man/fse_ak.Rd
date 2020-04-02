@@ -2,13 +2,25 @@
 % Please edit documentation in R/fse_ak.R
 \name{fse_ak}
 \alias{fse_ak}
+\alias{fse_pk}
+\alias{fse_sk}
+\alias{set_fse_pk}
+\alias{set_fse_sk}
 \alias{print.fse_key}
 \alias{as_fse_key}
 \alias{as_fse_key.character}
 \alias{as_fse_key.default}
 \title{FSE access keys}
 \usage{
-fse_ak(key = NULL, verbose = getOption("fse.verbose", FALSE))
+fse_ak(use = getOption("fse.key_type", "auto"))
+
+fse_pk()
+
+fse_sk()
+
+set_fse_pk(key)
+
+set_fse_sk(key)
 
 \method{print}{fse_key}(x, ...)
 
@@ -19,18 +31,48 @@ as_fse_key(x, ...)
 \method{as_fse_key}{default}(x, ...)
 }
 \arguments{
-\item{verbose}{logical, should more verbose output be provided
+\item{use}{type of key to use. Expects \code{"service"}, \code{"personal"} or \code{"auto"}
+(default).}
 
-Retrieved from an enviroment variable \code{FSE_ACCESS_KEY}.}
+\item{key}{FSE key}
 
-\item{x}{for the \code{print} method, object inheriting from class "fse_key".
+\item{x}{for the \code{\link[=print]{print()}} method, object inheriting from class "fse_key".
 For \code{as_fse_key} object coercible to character interpreted as FSE
 access key.}
 }
+\value{
+Function \code{\link[=fse_ak]{fse_ak()}} returns the access key or throws an error if non is found.
+
+Functions \code{\link[=fse_sk]{fse_sk()}} and \code{\link[=fse_pk]{fse_pk()}} return the FSE access key of
+specified type or \code{NA} if it is not available.
+
+Functions \code{\link[=set_fse_pk]{set_fse_pk()}}, \code{\link[=set_fse_sk]{set_fse_sk()}} return invisibly \code{TRUE} or
+\code{FALSE} if the key was succesfully set, just like \code{\link[=Sys.setenv]{Sys.setenv()}}.
+}
 \description{
-FSE access keys
+FSE access keys give access to the data feeds. For a more
+complete description see
+https://sites.google.com/site/fseoperationsguide/expansion/data-feeds. The
+package can work with both the personal key (PK) or the service key (SK).
+Functions below allow for setting and retrieving these access keys.
+
+\itemize{
+\item \code{\link[=fse_ak]{fse_ak()}} -- returns the default access key for use when querying the data feeds
+}
+
+\itemize{
+\item \code{\link[=fse_pk]{fse_pk()}}, \code{\link[=fse_sk]{fse_sk()}} -- Retrieve, respectively, FSE personal or service key if available.
+}
+
+\itemize{
+\item \code{\link[=set_fse_pk]{set_fse_pk()}}, \code{\link[=set_fse_sk]{set_fse_sk()}} -- Set FSE personal and service key
+}
 }
 \details{
-Function \code{as_fse_key} stores an FSE access key together with the
+For \code{\link[=fse_ak]{fse_ak()}} the type of key returned depends on \code{use}. If it is
+\code{"auto"} (the default) the function looks for service key first, personal
+second and throws error if none is found.
+
+Function \code{\link[=as_fse_key]{as_fse_key()}} stores an FSE access key together with the
 information whether it is a personal key or service key.
 }

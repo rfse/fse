@@ -1,51 +1,105 @@
 #' FSE access keys
 #'
-#' @param verbose logical, should more verbose output be provided
+#' @description FSE access keys give access to the data feeds. For a more
+#'   complete description see
+#'   https://sites.google.com/site/fseoperationsguide/expansion/data-feeds. The
+#'   package can work with both the personal key (PK) or the service key (SK).
+#'   Functions below allow for setting and retrieving these access keys.
 #'
-#' Retrieved from an enviroment variable \code{FSE_ACCESS_KEY}.
+#' @description - [fse_ak()] -- returns the default access key for use when querying the data feeds
+#'
+#' @param use type of key to use. Expects `"service"`, `"personal"` or `"auto"`
+#'   (default).
+#'
+#' @details For [fse_ak()] the type of key returned depends on `use`. If it is
+#'   `"auto"` (the default) the function looks for service key first, personal
+#'   second and throws error if none is found.
+#'
+#' @return Function [fse_ak()] returns the access key or throws an error if non is found.
+#'
 #' @export
-fse_ak <- function(key=NULL, verbose=getOption("fse.verbose", FALSE)) {
-  if( !is.null(key) ) {
-    return(key)
+
+fse_ak <- function(use=getOption("fse.key_type", "auto")) {
+  k <- if(identical(use, "auto")) {
+    # service > personal > error
+    k <- first_notna(fse_sk(), fse_pk(), NA)
   } else {
-    # Use service key or personal key?
-    use_service <- TRUE
-    use_service <- ifelse(
-      Sys.getenv("FSE_USE_SERVICE") != "",
-      as.logical( as.numeric(Sys.getenv("FSE_USE_SERVICE") ) ),
-      use_service
-    )
-    use_service <- getOption("fse.use_service", use_service)
-    if(verbose) cat(paste("Using", ifelse(use_service, "service", "personal"), "key\n"))
-    var_name <- paste(
-      "FSE",
-      ifelse(use_service, "SERVICE", "PERSONAL"),
-      "KEY",
-      sep="_"
-    )
-    option_name <- paste0(
-      "fse.",
-      ifelse(use_service, "service", "personal"),
-      "_key"
+    # look at `use`
+    stopifnot(is.character(use))
+    switch(
+      use,
+      personal = fse_pk(),
+      service = fse_sk(),
+      stop("`use` must be 'personal' or 'service'")
     )
   }
-
-  key <- getOption(option_name, Sys.getenv(var_name))
-
-  if (key == "" || is.null(key)) {
-    stop("no FSE key, set in the environment or option, or use `key` argument")
-  }
-
-  as_fse_key(key, ifelse(use_service, "service", "personal"))
+  if(is.na(k)) stop("no access key found")
+  k
 }
+
+
+
+
+#' @rdname fse_ak
+#'
+#' @description - [fse_pk()], [fse_sk()] -- Retrieve, respectively, FSE personal or service key if available.
+#'
+#' @return Functions [fse_sk()] and [fse_pk()] return the FSE access key of
+#'   specified type or `NA` if it is not available.
+#'
+#' @export
+
+fse_pk <- function() {
+  ch <- Sys.getenv("FSE_PERSONAL_KEY")
+  if(identical(ch, "")) return(as.character(NA)) else as_fse_key(ch, type="personal")
+}
+
+#' @rdname fse_ak
+#' @export
+
+fse_sk <- function() {
+  ch <- Sys.getenv("FSE_SERVICE_KEY")
+  if(identical(ch, "")) return(as.character(NA)) else as_fse_key(ch, type="service")
+}
+
+
+
+
+#' @rdname fse_ak
+#'
+#' @description - [set_fse_pk()], [set_fse_sk()] -- Set FSE personal and service key
+#'
+#' @param key character scalar with FSE key
+#'
+#' @return Functions [set_fse_pk()], [set_fse_sk()] return invisibly `TRUE` or
+#'   `FALSE` if the key was succesfully set, just like [Sys.setenv()].
+#'
+#' @export
+
+set_fse_pk <- function(key) {
+  Sys.setenv("FSE_PERSONAL_KEY" = key)
+}
+
+
+#' @rdname fse_ak
+#' @export
+
+set_fse_sk <- function(key) {
+  Sys.setenv("FSE_SERVICE_KEY" = key)
+}
+
+
+
+
+
 
 
 
 #' @method print fse_key
 #' @rdname fse_ak
 #'
-#' @param x for the \code{print} method, object inheriting from class "fse_key".
-#'   For \code{as_fse_key} object coercible to character interpreted as FSE
+#' @param x for the [print()] method, object inheriting from class "fse_key".
+#'   For `as_fse_key` object coercible to character interpreted as FSE
 #'   access key.
 #'
 #' @export
@@ -62,7 +116,7 @@ print.fse_key <- function(x, ...) {
 #' @rdname fse_ak
 #'
 #' @details
-#' Function \code{as_fse_key} stores an FSE access key together with the
+#' Function [as_fse_key()] stores an FSE access key together with the
 #' information whether it is a personal key or service key.
 #'
 #' @export
@@ -84,3 +138,6 @@ as_fse_key.character <- function(x, type=c("personal", "service")) {
 as_fse_key.default <- function(x, ...) {
   as_fse_key.character(as.character(x), ...)
 }
+
+
+
