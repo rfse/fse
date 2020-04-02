@@ -1,3 +1,7 @@
+
+
+# Parse CSV in binary -----------------------------------------------------
+
 # Given a CSV in binary format convert to character and read
 #
 # @param r raw vector
@@ -13,6 +17,8 @@ parse_csv <- function(r, ...) {
 
 
 
+# Flatten a list ----------------------------------------------------------
+
 # Flatten a list for printing query arguments
 #
 # @param l a list
@@ -26,6 +32,8 @@ flatten_arg_list <- function(l) {
 
 
 
+# Render data frame in Rd -------------------------------------------------
+
 # Render dataframe as an Rd-style itemize list
 #
 # @param d data frame
@@ -38,7 +46,8 @@ rd_data_frame <- function(d) {
 
 
 
-# condition  ----------------------------------------
+# Simple condition --------------------------------------------------------
+
 # Simple condition generator as shown here
 # http://adv-r.had.co.nz/Exceptions-Debugging.html#condition-handling
 condition <- function(subclass, message, call = sys.call(-1), ...) {
@@ -77,4 +86,20 @@ first_notna <- function(...) {
 
 if(FALSE) {
   first_notna(NA, NA, 11)
+}
+
+
+
+
+# Data frame column names as Markdown list --------------------------------
+
+md_list <- function(object, roxygen=FALSE) {
+  vnames <- names(object)
+  cat(
+    paste0(
+      if(roxygen) "#' ",
+      "- `", vnames, "` -- "
+    ),
+    sep = "\n"
+  )
 }
