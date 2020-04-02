@@ -17,6 +17,8 @@ fse_icao_fbos(icao, ...)
 \item{accesskey}{FSE read access key}
 
 \item{...}{other arguments passed to \code{\link[=fse_api]{fse_api()}}}
+
+\item{icao}{ICAO code of an airport}
 }
 \value{
 Feed function returns a \code{data.frame} (default) or \code{xml_document} depending on

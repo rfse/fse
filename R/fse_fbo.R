@@ -71,6 +71,8 @@ fse_fbo_for_sale <- function(...) {
 #'
 #' @description - [fse_icao_fbos()] - list FBOs present at an airport
 #'
+#' @param icao ICAO code of an airport
+#'
 #' @export
 
 fse_icao_fbos <- function(icao, ...) {
