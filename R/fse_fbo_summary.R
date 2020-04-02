@@ -14,10 +14,10 @@ fse_fbo_summary <- function(icao, month, year, accesskey, ...) {
   fse_api(
     query = "fbos",
     search = "monthlysummary",
-    readaccesskey = fse_sk(),
-    icao = "CZFA",
-    month = 1,
-    year = 2020
+    readaccesskey = accesskey,
+    icao = icao,
+    month = month,
+    year = year
   )$content
 }
 
