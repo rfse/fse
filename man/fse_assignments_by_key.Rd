@@ -47,6 +47,7 @@ Other FSE feeds:
 \code{\link{fse_aircraft}},
 \code{\link{fse_commodities_by_key}()},
 \code{\link{fse_facilities_by_key}()},
+\code{\link{fse_fbo_summary}()},
 \code{\link{fse_fbo}},
 \code{\link{fse_group_members}()},
 \code{\link{fse_jobs}},
