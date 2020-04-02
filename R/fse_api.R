@@ -77,7 +77,11 @@ fse_api <- function(
   # return(url)
 
   # Make user agent
-  ua <- user_agent("skybike's R package under development")
+  ua <- user_agent(paste0(
+    "skybike's R package 'fse' ",
+    "(version ", getNamespaceVersion("fse"), ") ",
+    "under development"
+  ))
 
   # Make the request
   resp <- GET(url, ua)
