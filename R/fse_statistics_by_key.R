@@ -4,8 +4,15 @@
 #'
 #' @param accesskey FSE read access key
 #'
-#' @templateVar feedname statistics_by_key
-#' @template feed
+#' @template feed2
+#'
+#' @return The object with the following columns/tags:
+#'
+#' @return - `Personal_balance` -- Money in the wallet
+#' - `Bank_balance` -- Money in the bank
+#' - `flights` -- Number of flights made to date
+#' - `Total_Miles` -- Total number of NMs flown
+#' - `Time_Flown` -- Total time in the air in `hh:mm`
 #'
 #' @export
 

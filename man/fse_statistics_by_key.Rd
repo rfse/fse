@@ -9,14 +9,21 @@ fse_statistics_by_key(accesskey, ...)
 \arguments{
 \item{accesskey}{FSE read access key}
 
-\item{...}{other arguments passed to \code{\link{fse_api}}}
+\item{...}{other arguments passed to \code{\link[=fse_api]{fse_api()}}}
 }
 \value{
-Feed can return \code{data.frame} (default) or \code{xml_document} depending
-on the value of \code{format} (see \code{\link{fse_api}}). In either case the result will
-contain the following columns/tags:
+Feed function returns a \code{data.frame} (default) or \code{xml_document} depending on
+the value of \code{format} argument (see \code{fse_api} for details).
 
-\Sexpr[results=verbatim,stage=render,echo=FALSE]{try(fse:::column_descriptions('statistics_by_key'))}
+The object with the following columns/tags:
+
+\itemize{
+\item \code{Personal_balance} -- Money in the wallet
+\item \code{Bank_balance} -- Money in the bank
+\item \code{flights} -- Number of flights made to date
+\item \code{Total_Miles} -- Total number of NMs flown
+\item \code{Time_Flown} -- Total time in the air in \code{hh:mm}
+}
 }
 \description{
 User statistics such as financials, number of flights and miles flown.
