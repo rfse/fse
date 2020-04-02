@@ -4,8 +4,7 @@
 #'
 #' @param accesskey Read Access Key of a FSE group
 #'
-#' @templateVar feedname icao_fbos
-#' @template feed
+#' @template feed2
 #'
 #' @export
 fse_group_members <- function(accesskey, ...) {
