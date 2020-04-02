@@ -128,6 +128,8 @@ fse_log_by_reg_from_id <- function(aircraftreg, fromid, ...) {
 #' @description - `fse_log_by_serial_monthyear` -- Query flight logs by aircraft
 #'   serial number, year and month.
 #'
+#' @param year,month year and month as integers
+#'
 #' @export
 #'
 #' @examples

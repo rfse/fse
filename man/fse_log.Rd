@@ -35,6 +35,8 @@ fse_log_by_key_monthyear(accesskey, year, month, ...)
 \item{accesskey}{group's read access key}
 
 \item{aircraftreg}{aircraft registration number}
+
+\item{year, month}{year and month as integers}
 }
 \value{
 Feed function returns a \code{data.frame} (default) or \code{xml_document} depending on
