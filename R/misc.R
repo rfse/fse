@@ -52,3 +52,29 @@ condition <- function(subclass, message, call = sys.call(-1), ...) {
 # is it a condition?
 is.condition <- function(x) inherits(x, "condition")
 
+
+
+
+# Return first non-NA expression ----------------------------------------
+
+# Given a list of expressions return the value of the first that does not return
+# a NULL.
+
+first_notna <- function(...) {
+  arg <- list(...)
+  rval <- NULL
+  for(i in seq(along=arg)) {
+    x <- arg[[i]]
+    if(!is.na(x)) {
+      rval <- x
+      break
+    }
+  }
+  if(is.null(rval)) NA else rval
+}
+
+
+
+if(FALSE) {
+  first_notna(NA, NA, 11)
+}
