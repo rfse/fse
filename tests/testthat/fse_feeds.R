@@ -7,8 +7,8 @@ test_that("fse_aircraft_by_owner_name returns data.frame", {
   expect_s3_class(r, "data.frame")
 })
 
+
 test_that("fse_aircraft_by_owner_name gives error for nonexisting user", {
-  skip("API errors not yet implemented")
   expect_error(
     r <- fse_aircraft_by_owner_name("xxxx")
   )
