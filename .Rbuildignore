@@ -1,4 +1,5 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
-scrapbook.R
-man-roxygen
+^scrapbook\.R^
+^man-roxygen$
+^data-raw$
