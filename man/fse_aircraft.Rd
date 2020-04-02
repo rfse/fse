@@ -89,9 +89,9 @@ FSE read access key
 \details{
 For \code{\link[=fse_aircraft_by_makemodel]{fse_aircraft_by_makemodel()}}, to get a list of valid model
 names that can be submitted to \code{makemodel} fetch aircraft configs with
-\code{\link{fse_aicraft_configs}} or go to FSE system WWW page, "Aircraft"
-menu, "Purchase aircraft" item and check the dropdown list after selecting
-"By model" radio button.
+\code{\link[=fse_aircraft_configs]{fse_aircraft_configs()}} or go to FSE system WWW page, "Aircraft" menu,
+"Purchase aircraft" item and check the dropdown list after selecting "By
+model" radio button.
 }
 \examples{
 \dontrun{
