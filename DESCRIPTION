@@ -6,6 +6,7 @@ Date: 2020-04-01
 Authors@R: person("Michal", "Bojanowski", role=c("aut", "cre"), email="michal2992@gmail.com")
 Description: FSE system provides several data feeds. This package provides 
   functions to fetch data from FSE into either data frames or XML objects.
+Depends: R (>= 2.10)
 Imports: httr, xml2, utils
 Suggests: testthat, withr
 License: GPL-2
