@@ -43,7 +43,6 @@ List "My flight" assignments for the provided read access key.
 Other FSE feeds: 
 \code{\link{fse_aircraft_aliases}()},
 \code{\link{fse_aircraft_configs}()},
-\code{\link{fse_aircraft_for_sale}()},
 \code{\link{fse_aircraft_status_by_registration}()},
 \code{\link{fse_aircraft}},
 \code{\link{fse_commodities_by_key}()},

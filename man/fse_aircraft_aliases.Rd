@@ -31,7 +31,6 @@ r <- fse_aircraft_aliases()
 \seealso{
 Other FSE feeds: 
 \code{\link{fse_aircraft_configs}()},
-\code{\link{fse_aircraft_for_sale}()},
 \code{\link{fse_aircraft_status_by_registration}()},
 \code{\link{fse_aircraft}},
 \code{\link{fse_assignments_by_key}()},

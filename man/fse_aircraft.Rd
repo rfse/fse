@@ -6,6 +6,7 @@
 \alias{fse_aircraft_by_key}
 \alias{fse_aircraft_by_owner_name}
 \alias{fse_icao_aircraft}
+\alias{fse_aircraft_for_sale}
 \title{Query FSE aircraft}
 \usage{
 fse_aircraft_by_makemodel(makemodel, ...)
@@ -15,6 +16,8 @@ fse_aircraft_by_key(accesskey, ...)
 fse_aircraft_by_owner_name(ownername, ...)
 
 fse_icao_aircraft(icao, ...)
+
+fse_aircraft_for_sale(...)
 }
 \arguments{
 \item{makemodel}{character, aircraft model name, see Details}
@@ -78,6 +81,10 @@ FSE read access key
 \itemize{
 \item \code{fse_icao_aircraft} -- List of aircraft at ICAO
 }
+
+\itemize{
+\item \code{\link[=fse_aircraft_for_sale]{fse_aircraft_for_sale()}} -- List aircraft currently for sale
+}
 }
 \details{
 For \code{\link[=fse_aircraft_by_makemodel]{fse_aircraft_by_makemodel()}}, to get a list of valid model
@@ -98,7 +105,6 @@ r <- fse_icao_aircraft("epbc")
 Other FSE feeds: 
 \code{\link{fse_aircraft_aliases}()},
 \code{\link{fse_aircraft_configs}()},
-\code{\link{fse_aircraft_for_sale}()},
 \code{\link{fse_aircraft_status_by_registration}()},
 \code{\link{fse_assignments_by_key}()},
 \code{\link{fse_commodities_by_key}()},

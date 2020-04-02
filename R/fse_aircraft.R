@@ -118,3 +118,19 @@ fse_icao_aircraft <- function(icao, ...) {
   )$content
 }
 
+
+
+
+
+#' @rdname fse_aircraft
+#'
+#' @description - [fse_aircraft_for_sale()] -- List aircraft currently for sale
+#'
+#' @export
+fse_aircraft_for_sale <- function(...) {
+  fse_api(
+    query="aircraft",
+    search="forsale",
+    ...
+  )$content
+}
