@@ -4,8 +4,13 @@
 #'
 #' @param accesskey FSE read access key
 #'
-#' @templateVar feedname assignments_by_key
-#' @template feed
+#' @template feed2
+#'
+#' @return The object with the following columns/tags:
+#'
+#' @return - `Location` -- ICAO of airport where the commodity is at
+#' - `Commodity` -- Commodity name
+#' - `Amount` -- Amount of `Commodity` at `Location` in kilograms
 #'
 #' @export
 
