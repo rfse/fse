@@ -21,5 +21,4 @@ Great circle distance between airports
 }
 \examples{
 icao_distance(c("EPWA", "EPBC"))
-
 }

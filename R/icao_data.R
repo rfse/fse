@@ -34,6 +34,7 @@ fse_icao_data <- function() {
 
 # Returns logical vector if ICAO code is OK. Case-insensitive
 known_icao <- function(x){
+  icao_data <- get("icao_data")
   stopifnot(is.character(x))
   toupper(x) %in% icao_data$icao
 }

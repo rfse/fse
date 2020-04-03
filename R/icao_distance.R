@@ -13,9 +13,10 @@ icao_distance <- function(x, ...) UseMethod("icao_distance")
 #'
 #' @param unit unit of the computation
 #'
+#' @export
+#'
 #' @examples
 #' icao_distance(c("EPWA", "EPBC"))
-#'
 icao_distance.character <- function(x, unit=c("nm", "km", "m"), ...) {
   if(!requireNamespace("geosphere")) stop("please install package 'geosphere")
   test_icao(unique(x))
