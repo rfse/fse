@@ -1,4 +1,4 @@
-#' Aircraft configuraion data
+#' Aircraft configuration data
 #'
 #' Data on all types of aircraft available in FSE. The function will fetch it
 #' from the server, but it does not change too frequently, hence a built-in

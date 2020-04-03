@@ -4,7 +4,7 @@
 \name{fse_aircraft_configs}
 \alias{fse_aircraft_configs}
 \alias{aircraft_configs}
-\title{Aircraft configuraion data}
+\title{Aircraft configuration data}
 \format{
 Object \code{aircraft_configs} is a data frame returned by
 \code{\link[=fse_aircraft_configs]{fse_aircraft_configs()}} and has the following columns:
