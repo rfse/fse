@@ -27,3 +27,23 @@ fse_icao_data <- function() {
   con <- unz(fname, "icaodata.csv")
   utils::read.csv(con, stringsAsFactors = FALSE)
 }
+
+
+
+# Check and test ICAO codes -----------------------------------------------
+
+# Returns logical vector if ICAO code is OK. Case-insensitive
+known_icao <- function(x){
+  stopifnot(is.character(x))
+  toupper(x) %in% icao_data$icao
+}
+
+# Return TRUE of all ICAO codes are OK or stop()
+test_icao <- function(x) {
+  z <- known_icao(x)
+  if(any(!z)) {
+    stop("unknown ICAO codes: ", paste(x[!z], collapse=", "))
+  } else {
+    return(TRUE)
+  }
+}
