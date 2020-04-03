@@ -6,7 +6,34 @@
 \alias{aircraft_configs}
 \title{Aircraft configuraion data}
 \format{
-Data frame with aircraft configuration.
+Object \code{aircraft_configs} is a data frame returned by
+\code{\link[=fse_aircraft_configs]{fse_aircraft_configs()}} and has the following columns:
+
+\itemize{
+\item \code{MakeModel} -- Aircraft model name
+\item \code{Crew} -- Number of crew members
+\item \code{Seats} -- Number of PAX seats
+\item \code{CruiseSpeed} -- Average cruise speed
+\item \code{GPH} -- Fuel consumption in Gallons Per Hour
+\item \code{FuelType} -- Fuel type
+\item \code{MTOW} -- Maximal TakeOff Weight
+\item \code{EmptyWeight} -- Empty weight
+\item \code{Price} -- System aircraft price
+\item \code{Ext1} -- Fuel tank capacity: external 1
+\item \code{LTip} --
+\item \code{LAux} --
+\item \code{LMain} --
+\item \code{Center1} --
+\item \code{Center2} --
+\item \code{Center3} --
+\item \code{RMain} --
+\item \code{RAux} --
+\item \code{RTip} --
+\item \code{RExt2} -- Fuel tank capacity: right external 2
+\item \code{Engines} -- Number of engines
+\item \code{EnginePrice} -- Engine price (maintenance)
+\item \code{ModelId} -- Aircraft model ID
+}
 }
 \usage{
 fse_aircraft_configs(...)
@@ -20,12 +47,10 @@ aircraft_configs
 Feed function returns a \code{data.frame} (default) or \code{xml_document} depending on
 the value of \code{format} argument (see \code{fse_api} for details).
 
-Object returned contains the following columns/tags:
-
-\itemize{
-\item \code{Crew}
-\item \code{Seats}
-}
+Function \code{\link[=fse_aircraft_configs]{fse_aircraft_configs()}} return a data frame or XML object
+with the columns/tags listed in the Format section. Object
+\link{aircraft_configs} is simply a data frame returned by that function on
+2020-04-03.
 }
 \description{
 Data on all types of aircraft available in FSE. The function will fetch it
