@@ -3,6 +3,7 @@
 #' @param x character vector of ICAO codes
 #' @param ... other arguments
 #'
+#' @export
 
 icao_distance <- function(x, ...) UseMethod("icao_distance")
 
