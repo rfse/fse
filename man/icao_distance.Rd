@@ -19,3 +19,7 @@ icao_distance(x, ...)
 \description{
 Great circle distance between airports
 }
+\examples{
+icao_distance(c("EPWA", "EPBC"))
+
+}
