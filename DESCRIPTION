@@ -8,7 +8,7 @@ Description: FSE system provides several data feeds. This package provides
   functions to fetch data from FSE into either data frames or XML objects.
 Depends: R (>= 2.10)
 Imports: httr, xml2, utils
-Suggests: testthat, withr
+Suggests: testthat, withr, geosphere
 License: GPL-2
 LazyData: TRUE
 Encoding: UTF-8

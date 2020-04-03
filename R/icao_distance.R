@@ -13,8 +13,10 @@ icao_distance <- function(x, ...) UseMethod("icao_distance")
 #' @param unit unit of the computation
 #'
 icao_distance.character <- function(x, unit=c("nm", "km", "m"), ...) {
+  if(!requireNamespace("geosphere")) stop("please install package 'geosphere")
   test_icao(unique(x))
   unit <- match.arg(unit)
+  icao_data <- get("icao_data") # avoid R CMD check global variable warning
 
   # Create a list of arguments to geosphere::distVincentyEllipsoid() adjusting
   # the arguments to selected units.
