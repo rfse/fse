@@ -1,6 +1,8 @@
 #' Aircraft configuraion data
 #'
-#' Data on all types of aircraft available in FSE.
+#' Data on all types of aircraft available in FSE. The function will fetch it
+#' from the server, but it does not change too frequently, hence a built-in
+#' version too.
 #'
 #' @template feed2
 #'
@@ -23,3 +25,12 @@ fse_aircraft_configs <- function(...) {
   )
   res$content
 }
+
+
+
+
+
+#' @rdname fse_aircraft_configs
+#'
+#' @format Data frame with aircraft configuration.
+"aircraft_configs"
