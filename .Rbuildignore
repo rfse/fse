@@ -3,3 +3,4 @@
 ^scrapbook\.R$
 ^man-roxygen$
 ^data-raw$
+^\.github$

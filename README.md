@@ -1,5 +1,10 @@
 # FSE data feeds
 
+<!-- badges: start -->
+  [![R build status](https://github.com/rfse/fse/workflows/R-CMD-check/badge.svg)](https://github.com/rfse/fse/actions)
+<!-- badges: end -->
+
+
 Importing [FSE](www.fseconomy.net) data feeds into R.
 
 
