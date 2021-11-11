@@ -5,7 +5,7 @@
 <!-- badges: end -->
 
 
-Importing [FSE](www.fseconomy.net) data feeds into R.
+Importing [FSE](https://www.fseconomy.net) data feeds into R.
 
 
 
