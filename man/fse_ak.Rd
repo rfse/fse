@@ -55,10 +55,10 @@ Functions \code{\link[=set_fse_pk]{set_fse_pk()}}, \code{\link[=set_fse_sk]{set_
 }
 \description{
 FSE access keys give access to the data feeds. For a more
-complete description see
-https://sites.google.com/site/fseoperationsguide/expansion/data-feeds. The
-package can work with both the personal key (PK) or the service key (SK).
-Functions below allow for setting and retrieving these access keys.
+complete description see chapter "Data Feeds" of
+\href{https://sites.google.com/site/fseoperationsguide}{FSE Operations Guide}.
+The package can work with both the personal key (PK) or the service key
+(SK). Functions below allow for setting and retrieving these access keys.
 
 \itemize{
 \item \code{\link[=fse_ak]{fse_ak()}} -- returns the default access key for use when querying the data feeds

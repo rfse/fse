@@ -1,10 +1,10 @@
 #' FSE access keys
 #'
 #' @description FSE access keys give access to the data feeds. For a more
-#'   complete description see
-#'   https://sites.google.com/site/fseoperationsguide/expansion/data-feeds. The
-#'   package can work with both the personal key (PK) or the service key (SK).
-#'   Functions below allow for setting and retrieving these access keys.
+#'   complete description see chapter "Data Feeds" of
+#'   [FSE Operations Guide](https://sites.google.com/site/fseoperationsguide).
+#'   The package can work with both the personal key (PK) or the service key
+#'   (SK). Functions below allow for setting and retrieving these access keys.
 #'
 #' @description - [fse_ak()] -- returns the default access key for use when querying the data feeds
 #'
